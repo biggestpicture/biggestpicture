@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Biggest Picture — Global State Control &amp; Surveillance Heat Map</title>
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page:           #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --border:         rgba(11,11,11,0.10);
+    --no-data:        #d8d7d0;
+    --ramp-lo:        #cde2fb;
+    --ramp-hi:        #0d366b;
+    --accent:         #2a78d6;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--page);
+    color: var(--text-primary);
+    padding: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --page:           #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --border:         rgba(255,255,255,0.10);
+      --no-data:        #3a3a37;
+      --ramp-lo:        #16345c;
+      --ramp-hi:        #8fc2ff;
+      --accent:         #3987e5;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page:           #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --border:         rgba(255,255,255,0.10);
+    --no-data:        #3a3a37;
+    --ramp-lo:        #16345c;
+    --ramp-hi:        #8fc2ff;
+    --accent:         #3987e5;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); }
+
+  .header h1 { font-size: 20px; margin: 0 0 4px; }
+  .header .tag { font-size: 12px; color: var(--text-muted); margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .header p.sub { font-size: 13px; color: var(--text-secondary); margin: 0 0 18px; max-width: 72ch; line-height: 1.5; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+  .tabs { display: flex; gap: 4px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px; padding: 3px; }
+  .tab-btn {
+    font: inherit; font-size: 12.5px; padding: 6px 10px; border-radius: 6px; border: none;
+    background: transparent; color: var(--text-secondary); cursor: pointer;
+  }
+  .tab-btn[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .tab-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .view-toggle {
+    margin-left: auto; font-size: 12.5px; padding: 6px 12px; border-radius: 6px;
+    border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); cursor: pointer;
+  }
+  .view-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+    padding: 16px; position: relative;
+  }
+
+  .legend { display: flex; align-items: center; gap: 10px; font-size: 11.5px; color: var(--text-secondary); margin-bottom: 12px; flex-wrap: wrap; }
+  .legend .ramp { width: 160px; height: 10px; border-radius: 5px; background: linear-gradient(90deg, var(--ramp-lo), var(--ramp-hi)); border: 1px solid var(--border); }
+  .legend .swatch { width: 12px; height: 12px; border-radius: 3px; background: var(--no-data); border: 1px solid var(--border); display: inline-block; vertical-align: -2px; }
+
+  svg#map { width: 100%; height: auto; display: block; }
+  svg#map path.country { stroke: var(--surface-1); stroke-width: 0.5; cursor: pointer; transition: filter 0.1s ease; }
+  svg#map path.country:hover, svg#map path.country:focus { filter: brightness(1.12); outline: none; }
+  svg#map path.country:focus-visible { stroke: var(--accent); stroke-width: 1.5; }
+
+  #tooltip {
+    position: fixed; pointer-events: none; z-index: 50;
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px 12px; font-size: 12px; color: var(--text-primary); box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    max-width: 240px; opacity: 0; transform: translateY(4px); transition: opacity 0.08s ease;
+  }
+  #tooltip.visible { opacity: 1; }
+  #tooltip h3 { margin: 0 0 6px; font-size: 13px; }
+  #tooltip .row { display: flex; justify-content: space-between; gap: 14px; padding: 2px 0; color: var(--text-secondary); }
+  #tooltip .row strong { color: var(--text-primary); font-variant-numeric: tabular-nums; }
+  #tooltip .row.active strong { color: var(--accent); }
+  #tooltip .na { color: var(--text-muted); font-style: italic; }
+
+  table#data-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table#data-table caption { display: none; }
+  table#data-table th, table#data-table td { text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--gridline); }
+  table#data-table th:first-child, table#data-table td:first-child { text-align: left; }
+  table#data-table th { color: var(--text-secondary); font-weight: 600; cursor: pointer; user-select: none; white-space: nowrap; }
+  table#data-table th:focus-visible { outline: 2px solid var(--accent); }
+  table#data-table td { font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  table#data-table td.na { color: var(--text-muted); font-style: italic; font-variant-numeric: normal; }
+  table#data-table tbody tr:hover { background: var(--page); }
+  .table-wrap { max-height: 520px; overflow: auto; border: 1px solid var(--border); border-radius: 8px; }
+
+  details.methodology { margin-top: 16px; font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+  details.methodology summary { cursor: pointer; font-weight: 600; color: var(--text-primary); padding: 4px 0; }
+  details.methodology h4 { font-size: 12.5px; color: var(--text-primary); margin: 12px 0 4px; }
+  details.methodology ul { margin: 4px 0; padding-left: 18px; }
+  details.methodology code { font-size: 11.5px; background: var(--page); padding: 1px 4px; border-radius: 3px; }
+
+  footer.links { margin-top: 18px; font-size: 12px; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+  footer.links a { color: var(--accent); text-decoration: none; }
+  footer.links a:hover { text-decoration: underline; }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  @media (max-width: 640px) {
+    .controls { flex-direction: column; align-items: stretch; }
+    .view-toggle { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="viz-root">
+  <div class="header">
+    <p class="tag">The Biggest Picture</p>
+    <h1>Global State Control &amp; Surveillance Heat Map</h1>
+    <p class="sub">A composite heat map combining three independently published indices into one directional score per country: AI surveillance deployment, movement &amp; regulatory/permitting restriction, and digital surveillance &amp; censorship. Higher = more state control. Named for the fable of the frog in slowly heating water &mdash; each individual measure looks survivable up close; the point of this project is to step back far enough to see the whole pot. This is an original open-data blend, not a published index &mdash; read the methodology before citing it.</p>
+  </div>
+
+  <div class="controls">
+    <div class="tabs" role="tablist" aria-label="Score axis">
+      <button class="tab-btn" role="tab" data-mode="composite" aria-pressed="true">Composite</button>
+      <button class="tab-btn" role="tab" data-mode="aigs" aria-pressed="false">AI Surveillance</button>
+      <button class="tab-btn" role="tab" data-mode="move" aria-pressed="false">Movement &amp; Regulatory</button>
+      <button class="tab-btn" role="tab" data-mode="digi" aria-pressed="false">Digital Surveillance</button>
+    </div>
+    <button class="view-toggle" id="view-toggle" aria-pressed="false">View as table</button>
+  </div>
+
+  <div class="card">
+    <div class="legend">
+      <span>Less control</span>
+      <span class="ramp" role="img" aria-label="Sequential scale from light blue, less control, to dark blue, more control"></span>
+      <span>More control</span>
+      <span style="margin-left:8px;"><span class="swatch"></span> No data</span>
+    </div>
+
+    <div id="map-view">
+      <svg id="map" viewBox="0 0 __VB_W__ __VB_H__" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map of state control and surveillance scores by country">
+__PATHS__
+      </svg>
+    </div>
+
+    <div id="table-view" class="table-wrap" style="display:none;">
+      <table id="data-table">
+        <caption>State control and surveillance scores by country</caption>
+        <thead>
+          <tr>
+            <th scope="col" data-key="name" tabindex="0">Country</th>
+            <th scope="col" data-key="composite" tabindex="0">Composite</th>
+            <th scope="col" data-key="aigs" tabindex="0">AI Surveillance</th>
+            <th scope="col" data-key="move" tabindex="0">Movement &amp; Regulatory</th>
+            <th scope="col" data-key="digi" tabindex="0">Digital Surveillance</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <details class="methodology">
+    <summary>Methodology, sources &amp; limitations (short version)</summary>
+    <h4>Sources</h4>
+    <ul>
+      <li><strong>AI Surveillance</strong> &mdash; Carnegie Endowment, AI Global Surveillance (AIGS) Index, 2022 update (Feldstein). Score = share of four tracked surveillance categories documented as deployed, scaled 0&ndash;100. Only countries with &ge;1 documented category are scored; the rest show "no data," not zero.</li>
+      <li><strong>Movement &amp; Regulatory Restriction</strong> &mdash; Human Freedom Index 2023 edition (Cato/Fraser), 2021 data. Average of <code>pf_movement</code> and <code>ef_regulation</code> sub-indices, inverted so higher = more restricted.</li>
+      <li><strong>Digital Surveillance &amp; Censorship</strong> &mdash; Feldstein/Carnegie Digital Repression Index 2021 (V-Dem-derived), min-max normalized 0&ndash;100.</li>
+    </ul>
+    <p>Full methodology, including composite calculation, known limitations, funding-conflict disclosure for source data, and the data-corruption fix applied during ingestion, lives in <code>docs/methodology.md</code> &mdash; linked below.</p>
+  </details>
+
+  <footer class="links">
+    <a href="../docs/methodology.md">Full methodology</a>
+    <a href="../GOVERNANCE.md">Governance</a>
+    <a href="../FUNDING.md">Funding &amp; conflict-of-interest policy</a>
+    <a href="../data/composite/biggestpicture-scores-2021-2022.json">Raw data (JSON)</a>
+  </footer>
+</div>
+
+<div id="tooltip" role="tooltip" aria-hidden="true"></div>
+
+<script id="country-data" type="application/json">__DATA__</script>
+<script>
+(function () {
+  var raw = JSON.parse(document.getElementById('country-data').textContent);
+  var countries = raw.countries;
+
+  var AXES = {
+    composite: { label: 'Composite Control Index' },
+    aigs:      { label: 'AI Surveillance Deployment' },
+    move:      { label: 'Movement & Regulatory Restriction' },
+    digi:      { label: 'Digital Surveillance & Censorship' }
+  };
+
+  function compositeOf(c) {
+    var vals = [c.aigs, c.move, c.digi].filter(function (v) { return v !== null && v !== undefined; });
+    if (!vals.length) return null;
+    var sum = vals.reduce(function (a, b) { return a + b; }, 0);
+    return Math.round((sum / vals.length) * 10) / 10;
+  }
+  countries.forEach(function (c) { c.composite = compositeOf(c); });
+
+  var root = document.documentElement;
+  function isDark() {
+    if (root.dataset.theme === 'dark') return true;
+    if (root.dataset.theme === 'light') return false;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  var LIGHT = { lo: [205, 226, 251], hi: [13, 54, 107] };
+  var DARK  = { lo: [22, 52, 92],   hi: [143, 194, 255] };
+  var NO_DATA_LIGHT = '#d8d7d0';
+  var NO_DATA_DARK = '#3a3a37';
+
+  function lerpColor(t, ramp) {
+    var lo = ramp.lo, hi = ramp.hi;
+    var r = Math.round(lo[0] + (hi[0] - lo[0]) * t);
+    var g = Math.round(lo[1] + (hi[1] - lo[1]) * t);
+    var b = Math.round(lo[2] + (hi[2] - lo[2]) * t);
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+  }
+
+  var currentMode = 'composite';
+
+  function valueFor(c, mode) { return c[mode]; }
+
+  function applyColors() {
+    var dark = isDark();
+    var ramp = dark ? DARK : LIGHT;
+    var noData = dark ? NO_DATA_DARK : NO_DATA_LIGHT;
+    var paths = document.querySelectorAll('svg#map path.country');
+    paths.forEach(function (p) {
+      var iso = p.getAttribute('data-iso3');
+      var c = countries.find(function (x) { return x.iso3 === iso; });
+      var v = c ? valueFor(c, currentMode) : null;
+      if (v === null || v === undefined) {
+        p.setAttribute('fill', noData);
+      } else {
+        p.setAttribute('fill', lerpColor(v / 100, ramp));
+      }
+    });
+  }
+
+  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyColors);
+  new MutationObserver(applyColors).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+
+  var tabs = document.querySelectorAll('.tab-btn');
+  tabs.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      tabs.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+      btn.setAttribute('aria-pressed', 'true');
+      currentMode = btn.getAttribute('data-mode');
+      applyColors();
+      renderTable();
+    });
+  });
+
+  var tooltip = document.getElementById('tooltip');
+  function fmt(v) { return (v === null || v === undefined) ? null : v.toFixed(1); }
+
+  function showTooltip(c, x, y) {
+    tooltip.innerHTML = '';
+    var h = document.createElement('h3');
+    h.textContent = c.name;
+    tooltip.appendChild(h);
+
+    ['composite', 'aigs', 'move', 'digi'].forEach(function (key) {
+      var row = document.createElement('div');
+      row.className = 'row' + (key === currentMode ? ' active' : '');
+      var label = document.createElement('span');
+      label.textContent = AXES[key].label;
+      row.appendChild(label);
+      var val = document.createElement('strong');
+      var v = fmt(c[key]);
+      if (v === null) {
+        val.textContent = 'no data';
+        val.className = 'na';
+      } else {
+        val.textContent = v;
+      }
+      row.appendChild(val);
+      tooltip.appendChild(row);
+    });
+
+    tooltip.classList.add('visible');
+    tooltip.setAttribute('aria-hidden', 'false');
+    positionTooltip(x, y);
+  }
+
+  function positionTooltip(x, y) {
+    var pad = 14;
+    var w = tooltip.offsetWidth || 220;
+    var h = tooltip.offsetHeight || 100;
+    var left = x + pad;
+    var top = y + pad;
+    if (left + w > window.innerWidth) left = x - w - pad;
+    if (top + h > window.innerHeight) top = y - h - pad;
+    tooltip.style.left = left + 'px';
+    tooltip.style.top = top + 'px';
+  }
+
+  function hideTooltip() {
+    tooltip.classList.remove('visible');
+    tooltip.setAttribute('aria-hidden', 'true');
+  }
+
+  var svg = document.getElementById('map');
+  svg.addEventListener('pointermove', function (e) {
+    var t = e.target;
+    if (t && t.classList && t.classList.contains('country')) {
+      var iso = t.getAttribute('data-iso3');
+      var c = countries.find(function (x) { return x.iso3 === iso; });
+      if (c) showTooltip(c, e.clientX, e.clientY);
+    }
+  });
+  svg.addEventListener('pointerleave', hideTooltip);
+
+  svg.querySelectorAll('path.country').forEach(function (p) {
+    p.addEventListener('focus', function () {
+      var iso = p.getAttribute('data-iso3');
+      var c = countries.find(function (x) { return x.iso3 === iso; });
+      if (!c) return;
+      var r = p.getBoundingClientRect();
+      showTooltip(c, r.left + r.width / 2, r.top);
+    });
+    p.addEventListener('blur', hideTooltip);
+  });
+
+  var viewToggle = document.getElementById('view-toggle');
+  var mapView = document.getElementById('map-view');
+  var tableView = document.getElementById('table-view');
+  var showingTable = false;
+  viewToggle.addEventListener('click', function () {
+    showingTable = !showingTable;
+    mapView.style.display = showingTable ? 'none' : '';
+    tableView.style.display = showingTable ? '' : 'none';
+    viewToggle.setAttribute('aria-pressed', String(showingTable));
+    viewToggle.textContent = showingTable ? 'View as map' : 'View as table';
+    if (showingTable) renderTable();
+  });
+
+  var tableBody = document.getElementById('table-body');
+  var sortKey = 'composite';
+  var sortDir = -1;
+
+  function renderTable() {
+    var rows = countries.slice().sort(function (a, b) {
+      var av = a[sortKey], bv = b[sortKey];
+      if (sortKey === 'name') {
+        return sortDir * String(av).localeCompare(String(bv));
+      }
+      var aNull = (av === null || av === undefined);
+      var bNull = (bv === null || bv === undefined);
+      if (aNull && bNull) return 0;
+      if (aNull) return 1;
+      if (bNull) return -1;
+      return sortDir * (av - bv);
+    });
+    tableBody.innerHTML = '';
+    rows.forEach(function (c) {
+      var tr = document.createElement('tr');
+      var tdName = document.createElement('td');
+      tdName.textContent = c.name;
+      tr.appendChild(tdName);
+      ['composite', 'aigs', 'move', 'digi'].forEach(function (key) {
+        var td = document.createElement('td');
+        var v = fmt(c[key]);
+        if (v === null) {
+          td.textContent = String.fromCharCode(8212);
+          td.className = 'na';
+        } else {
+          td.textContent = v;
+        }
+        tr.appendChild(td);
+      });
+      tableBody.appendChild(tr);
+    });
+  }
+
+  document.querySelectorAll('#data-table th[data-key]').forEach(function (th) {
+    function activate() {
+      var key = th.getAttribute('data-key');
+      if (sortKey === key) { sortDir *= -1; } else { sortKey = key; sortDir = key === 'name' ? 1 : -1; }
+      renderTable();
+    }
+    th.addEventListener('click', activate);
+    th.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+  });
+
+  applyColors();
+  renderTable();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+node_modules/
+site/build/countries_paths.json
+*.log

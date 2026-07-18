@@ -1,0 +1,1255 @@
+[
+  {
+    "country": "Afghanistan",
+    "iso3": "AFG",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 53.2
+  },
+  {
+    "country": "Albania",
+    "iso3": "ALB",
+    "aigs_score": null,
+    "movement_regulation_score": 32.3,
+    "digital_surveillance_score": 29.1
+  },
+  {
+    "country": "Algeria",
+    "iso3": "DZA",
+    "aigs_score": 25,
+    "movement_regulation_score": 48.8,
+    "digital_surveillance_score": 64.8
+  },
+  {
+    "country": "Angola",
+    "iso3": "AGO",
+    "aigs_score": 25,
+    "movement_regulation_score": 47.2,
+    "digital_surveillance_score": 29.9
+  },
+  {
+    "country": "Argentina",
+    "iso3": "ARG",
+    "aigs_score": 75,
+    "movement_regulation_score": 34.9,
+    "digital_surveillance_score": 10.8
+  },
+  {
+    "country": "Armenia",
+    "iso3": "ARM",
+    "aigs_score": 25,
+    "movement_regulation_score": 24.3,
+    "digital_surveillance_score": 22.9
+  },
+  {
+    "country": "Australia",
+    "iso3": "AUS",
+    "aigs_score": 100,
+    "movement_regulation_score": 28.2,
+    "digital_surveillance_score": 15.9
+  },
+  {
+    "country": "Austria",
+    "iso3": "AUT",
+    "aigs_score": 50,
+    "movement_regulation_score": 31.8,
+    "digital_surveillance_score": 11.1
+  },
+  {
+    "country": "Azerbaijan",
+    "iso3": "AZE",
+    "aigs_score": null,
+    "movement_regulation_score": 40.7,
+    "digital_surveillance_score": 62.3
+  },
+  {
+    "country": "Bahamas, The",
+    "iso3": "BHS",
+    "aigs_score": null,
+    "movement_regulation_score": 15.6,
+    "digital_surveillance_score": null
+  },
+  {
+    "country": "Bahrain",
+    "iso3": "BHR",
+    "aigs_score": 75,
+    "movement_regulation_score": 39.3,
+    "digital_surveillance_score": 59.7
+  },
+  {
+    "country": "Bangladesh",
+    "iso3": "BGD",
+    "aigs_score": 100,
+    "movement_regulation_score": 43.9,
+    "digital_surveillance_score": 65.6
+  },
+  {
+    "country": "Barbados",
+    "iso3": "BRB",
+    "aigs_score": null,
+    "movement_regulation_score": 23.6,
+    "digital_surveillance_score": 16
+  },
+  {
+    "country": "Belarus",
+    "iso3": "BLR",
+    "aigs_score": 50,
+    "movement_regulation_score": 48.3,
+    "digital_surveillance_score": 67.6
+  },
+  {
+    "country": "Belgium",
+    "iso3": "BEL",
+    "aigs_score": 50,
+    "movement_regulation_score": 21.4,
+    "digital_surveillance_score": 6.9
+  },
+  {
+    "country": "Belize",
+    "iso3": "BLZ",
+    "aigs_score": null,
+    "movement_regulation_score": 49.9,
+    "digital_surveillance_score": null
+  },
+  {
+    "country": "Benin",
+    "iso3": "BEN",
+    "aigs_score": null,
+    "movement_regulation_score": 33.5,
+    "digital_surveillance_score": 27.5
+  },
+  {
+    "country": "Bhutan",
+    "iso3": "BTN",
+    "aigs_score": null,
+    "movement_regulation_score": 36.6,
+    "digital_surveillance_score": 56.4
+  },
+  {
+    "country": "Bolivia",
+    "iso3": "BOL",
+    "aigs_score": 75,
+    "movement_regulation_score": 44.1,
+    "digital_surveillance_score": 33.2
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "iso3": "BIH",
+    "aigs_score": 25,
+    "movement_regulation_score": 27.3,
+    "digital_surveillance_score": 21.6
+  },
+  {
+    "country": "Botswana",
+    "iso3": "BWA",
+    "aigs_score": 50,
+    "movement_regulation_score": 37.5,
+    "digital_surveillance_score": 16.6
+  },
+  {
+    "country": "Brazil",
+    "iso3": "BRA",
+    "aigs_score": 100,
+    "movement_regulation_score": 40.6,
+    "digital_surveillance_score": 33.5
+  },
+  {
+    "country": "Brunei Darussalam",
+    "iso3": "BRN",
+    "aigs_score": null,
+    "movement_regulation_score": 45.1,
+    "digital_surveillance_score": null
+  },
+  {
+    "country": "Bulgaria",
+    "iso3": "BGR",
+    "aigs_score": null,
+    "movement_regulation_score": 24.2,
+    "digital_surveillance_score": 15.5
+  },
+  {
+    "country": "Burkina Faso",
+    "iso3": "BFA",
+    "aigs_score": null,
+    "movement_regulation_score": 36.4,
+    "digital_surveillance_score": 55.8
+  },
+  {
+    "country": "Burundi",
+    "iso3": "BDI",
+    "aigs_score": null,
+    "movement_regulation_score": 50.6,
+    "digital_surveillance_score": 58.6
+  },
+  {
+    "country": "Cabo Verde",
+    "iso3": "CPV",
+    "aigs_score": null,
+    "movement_regulation_score": 33.6,
+    "digital_surveillance_score": 15.6
+  },
+  {
+    "country": "Cambodia",
+    "iso3": "KHM",
+    "aigs_score": 25,
+    "movement_regulation_score": 37.9,
+    "digital_surveillance_score": 56
+  },
+  {
+    "country": "Cameroon",
+    "iso3": "CMR",
+    "aigs_score": 25,
+    "movement_regulation_score": 42.6,
+    "digital_surveillance_score": 43.7
+  },
+  {
+    "country": "Canada",
+    "iso3": "CAN",
+    "aigs_score": 75,
+    "movement_regulation_score": 27.5,
+    "digital_surveillance_score": 6.5
+  },
+  {
+    "country": "Central African Republic",
+    "iso3": "CAF",
+    "aigs_score": null,
+    "movement_regulation_score": 50.7,
+    "digital_surveillance_score": 30.7
+  },
+  {
+    "country": "Chad",
+    "iso3": "TCD",
+    "aigs_score": null,
+    "movement_regulation_score": 51.1,
+    "digital_surveillance_score": 65.2
+  },
+  {
+    "country": "Chile",
+    "iso3": "CHL",
+    "aigs_score": 50,
+    "movement_regulation_score": 34.9,
+    "digital_surveillance_score": 15
+  },
+  {
+    "country": "China",
+    "iso3": "CHN",
+    "aigs_score": 100,
+    "movement_regulation_score": 52.3,
+    "digital_surveillance_score": 76.5
+  },
+  {
+    "country": "Colombia",
+    "iso3": "COL",
+    "aigs_score": 75,
+    "movement_regulation_score": 38.3,
+    "digital_surveillance_score": 52.1
+  },
+  {
+    "country": "Comoros",
+    "iso3": "COM",
+    "aigs_score": null,
+    "movement_regulation_score": 41.9,
+    "digital_surveillance_score": 43.4
+  },
+  {
+    "country": "Congo, Dem. Rep.",
+    "iso3": "COD",
+    "aigs_score": null,
+    "movement_regulation_score": 38,
+    "digital_surveillance_score": 38.3
+  },
+  {
+    "country": "Congo, Rep.",
+    "iso3": "COG",
+    "aigs_score": null,
+    "movement_regulation_score": 47.4,
+    "digital_surveillance_score": 58.9
+  },
+  {
+    "country": "Costa Rica",
+    "iso3": "CRI",
+    "aigs_score": null,
+    "movement_regulation_score": 33.9,
+    "digital_surveillance_score": 9.6
+  },
+  {
+    "country": "Cote d'Ivoire",
+    "iso3": "CIV",
+    "aigs_score": 25,
+    "movement_regulation_score": 38.2,
+    "digital_surveillance_score": 39
+  },
+  {
+    "country": "Croatia",
+    "iso3": "HRV",
+    "aigs_score": 50,
+    "movement_regulation_score": 26.1,
+    "digital_surveillance_score": 15.9
+  },
+  {
+    "country": "Cuba",
+    "iso3": "CUB",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 73.7
+  },
+  {
+    "country": "Cyprus",
+    "iso3": "CYP",
+    "aigs_score": null,
+    "movement_regulation_score": 23.8,
+    "digital_surveillance_score": 12.6
+  },
+  {
+    "country": "Czech Republic",
+    "iso3": "CZE",
+    "aigs_score": 50,
+    "movement_regulation_score": 23.6,
+    "digital_surveillance_score": 12.5
+  },
+  {
+    "country": "Denmark",
+    "iso3": "DNK",
+    "aigs_score": 75,
+    "movement_regulation_score": 18.3,
+    "digital_surveillance_score": 2
+  },
+  {
+    "country": "Djibouti",
+    "iso3": "DJI",
+    "aigs_score": null,
+    "movement_regulation_score": 32.5,
+    "digital_surveillance_score": 54.9
+  },
+  {
+    "country": "Dominican Republic",
+    "iso3": "DOM",
+    "aigs_score": 25,
+    "movement_regulation_score": 37.9,
+    "digital_surveillance_score": 8.8
+  },
+  {
+    "country": "Ecuador",
+    "iso3": "ECU",
+    "aigs_score": 75,
+    "movement_regulation_score": 38,
+    "digital_surveillance_score": 39.3
+  },
+  {
+    "country": "Egypt, Arab Rep.",
+    "iso3": "EGY",
+    "aigs_score": 75,
+    "movement_regulation_score": 52.4,
+    "digital_surveillance_score": 63
+  },
+  {
+    "country": "El Salvador",
+    "iso3": "SLV",
+    "aigs_score": null,
+    "movement_regulation_score": 44.7,
+    "digital_surveillance_score": 27.6
+  },
+  {
+    "country": "Equatorial Guinea",
+    "iso3": "GNQ",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 65.8
+  },
+  {
+    "country": "Eritrea",
+    "iso3": "ERI",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 71.4
+  },
+  {
+    "country": "Estonia",
+    "iso3": "EST",
+    "aigs_score": null,
+    "movement_regulation_score": 17.8,
+    "digital_surveillance_score": 7.9
+  },
+  {
+    "country": "Eswatini",
+    "iso3": "SWZ",
+    "aigs_score": null,
+    "movement_regulation_score": 44.8,
+    "digital_surveillance_score": 62.8
+  },
+  {
+    "country": "Ethiopia",
+    "iso3": "ETH",
+    "aigs_score": null,
+    "movement_regulation_score": 45.3,
+    "digital_surveillance_score": 70.9
+  },
+  {
+    "country": "Fiji",
+    "iso3": "FJI",
+    "aigs_score": null,
+    "movement_regulation_score": 22.7,
+    "digital_surveillance_score": 30.1
+  },
+  {
+    "country": "Finland",
+    "iso3": "FIN",
+    "aigs_score": null,
+    "movement_regulation_score": 17.8,
+    "digital_surveillance_score": 4.8
+  },
+  {
+    "country": "France",
+    "iso3": "FRA",
+    "aigs_score": 100,
+    "movement_regulation_score": 31.3,
+    "digital_surveillance_score": 21.1
+  },
+  {
+    "country": "Gabon",
+    "iso3": "GAB",
+    "aigs_score": null,
+    "movement_regulation_score": 42.5,
+    "digital_surveillance_score": 51.5
+  },
+  {
+    "country": "Gambia, The",
+    "iso3": "GMB",
+    "aigs_score": null,
+    "movement_regulation_score": 32.2,
+    "digital_surveillance_score": 21.6
+  },
+  {
+    "country": "Georgia",
+    "iso3": "GEO",
+    "aigs_score": 75,
+    "movement_regulation_score": 22.1,
+    "digital_surveillance_score": 23.6
+  },
+  {
+    "country": "Germany",
+    "iso3": "DEU",
+    "aigs_score": 100,
+    "movement_regulation_score": 28.3,
+    "digital_surveillance_score": 14.5
+  },
+  {
+    "country": "Ghana",
+    "iso3": "GHA",
+    "aigs_score": 50,
+    "movement_regulation_score": 28.5,
+    "digital_surveillance_score": 18.5
+  },
+  {
+    "country": "Greece",
+    "iso3": "GRC",
+    "aigs_score": 50,
+    "movement_regulation_score": 27.3,
+    "digital_surveillance_score": 12
+  },
+  {
+    "country": "Guatemala",
+    "iso3": "GTM",
+    "aigs_score": null,
+    "movement_regulation_score": 35.6,
+    "digital_surveillance_score": 22.9
+  },
+  {
+    "country": "Guinea",
+    "iso3": "GIN",
+    "aigs_score": null,
+    "movement_regulation_score": 47.3,
+    "digital_surveillance_score": 56
+  },
+  {
+    "country": "Guinea-Bissau",
+    "iso3": "GNB",
+    "aigs_score": null,
+    "movement_regulation_score": 35.4,
+    "digital_surveillance_score": 32.2
+  },
+  {
+    "country": "Guyana",
+    "iso3": "GUY",
+    "aigs_score": null,
+    "movement_regulation_score": 39.6,
+    "digital_surveillance_score": 29
+  },
+  {
+    "country": "Haiti",
+    "iso3": "HTI",
+    "aigs_score": null,
+    "movement_regulation_score": 39.7,
+    "digital_surveillance_score": 30.2
+  },
+  {
+    "country": "Honduras",
+    "iso3": "HND",
+    "aigs_score": null,
+    "movement_regulation_score": 36.9,
+    "digital_surveillance_score": 28.6
+  },
+  {
+    "country": "Hong Kong SAR, China",
+    "iso3": "HKG",
+    "aigs_score": 75,
+    "movement_regulation_score": 15.6,
+    "digital_surveillance_score": 54.6
+  },
+  {
+    "country": "Hungary",
+    "iso3": "HUN",
+    "aigs_score": 50,
+    "movement_regulation_score": 34.5,
+    "digital_surveillance_score": 24.3
+  },
+  {
+    "country": "Iceland",
+    "iso3": "ISL",
+    "aigs_score": null,
+    "movement_regulation_score": 23.1,
+    "digital_surveillance_score": 9.9
+  },
+  {
+    "country": "India",
+    "iso3": "IND",
+    "aigs_score": 100,
+    "movement_regulation_score": 39.6,
+    "digital_surveillance_score": 57.4
+  },
+  {
+    "country": "Indonesia",
+    "iso3": "IDN",
+    "aigs_score": 100,
+    "movement_regulation_score": 40.4,
+    "digital_surveillance_score": 33.6
+  },
+  {
+    "country": "Iran, Islamic Rep.",
+    "iso3": "IRN",
+    "aigs_score": 100,
+    "movement_regulation_score": 53.5,
+    "digital_surveillance_score": 69.9
+  },
+  {
+    "country": "Iraq",
+    "iso3": "IRQ",
+    "aigs_score": 50,
+    "movement_regulation_score": 44.7,
+    "digital_surveillance_score": 49.2
+  },
+  {
+    "country": "Ireland",
+    "iso3": "IRL",
+    "aigs_score": null,
+    "movement_regulation_score": 18.5,
+    "digital_surveillance_score": 9.8
+  },
+  {
+    "country": "Israel",
+    "iso3": "ISR",
+    "aigs_score": 100,
+    "movement_regulation_score": 32.5,
+    "digital_surveillance_score": 30
+  },
+  {
+    "country": "Italy",
+    "iso3": "ITA",
+    "aigs_score": 100,
+    "movement_regulation_score": 34.2,
+    "digital_surveillance_score": 11.6
+  },
+  {
+    "country": "Jamaica",
+    "iso3": "JAM",
+    "aigs_score": 50,
+    "movement_regulation_score": 30.1,
+    "digital_surveillance_score": 12.3
+  },
+  {
+    "country": "Japan",
+    "iso3": "JPN",
+    "aigs_score": 50,
+    "movement_regulation_score": 29.5,
+    "digital_surveillance_score": 11
+  },
+  {
+    "country": "Jordan",
+    "iso3": "JOR",
+    "aigs_score": null,
+    "movement_regulation_score": 33.5,
+    "digital_surveillance_score": 40.5
+  },
+  {
+    "country": "Kazakhstan",
+    "iso3": "KAZ",
+    "aigs_score": 100,
+    "movement_regulation_score": 35.8,
+    "digital_surveillance_score": 60.9
+  },
+  {
+    "country": "Kenya",
+    "iso3": "KEN",
+    "aigs_score": 100,
+    "movement_regulation_score": 28.1,
+    "digital_surveillance_score": 31.5
+  },
+  {
+    "country": "Korea, Rep.",
+    "iso3": "KOR",
+    "aigs_score": 100,
+    "movement_regulation_score": 31.6,
+    "digital_surveillance_score": 12.3
+  },
+  {
+    "country": "Kosovo",
+    "iso3": "XKX",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 23.6
+  },
+  {
+    "country": "Kuwait",
+    "iso3": "KWT",
+    "aigs_score": null,
+    "movement_regulation_score": 29.7,
+    "digital_surveillance_score": 39.8
+  },
+  {
+    "country": "Kyrgyz Republic",
+    "iso3": "KGZ",
+    "aigs_score": 75,
+    "movement_regulation_score": 36.8,
+    "digital_surveillance_score": 32.4
+  },
+  {
+    "country": "Lao PDR",
+    "iso3": "LAO",
+    "aigs_score": 50,
+    "movement_regulation_score": 50.4,
+    "digital_surveillance_score": 47.8
+  },
+  {
+    "country": "Latvia",
+    "iso3": "LVA",
+    "aigs_score": null,
+    "movement_regulation_score": 20.2,
+    "digital_surveillance_score": 4.7
+  },
+  {
+    "country": "Lebanon",
+    "iso3": "LBN",
+    "aigs_score": 50,
+    "movement_regulation_score": 45.4,
+    "digital_surveillance_score": 49.9
+  },
+  {
+    "country": "Lesotho",
+    "iso3": "LSO",
+    "aigs_score": null,
+    "movement_regulation_score": 40.6,
+    "digital_surveillance_score": 32.6
+  },
+  {
+    "country": "Liberia",
+    "iso3": "LBR",
+    "aigs_score": null,
+    "movement_regulation_score": 44.7,
+    "digital_surveillance_score": 32.7
+  },
+  {
+    "country": "Libya",
+    "iso3": "LBY",
+    "aigs_score": null,
+    "movement_regulation_score": 57.1,
+    "digital_surveillance_score": 37
+  },
+  {
+    "country": "Lithuania",
+    "iso3": "LTU",
+    "aigs_score": null,
+    "movement_regulation_score": 21,
+    "digital_surveillance_score": 6.5
+  },
+  {
+    "country": "Luxembourg",
+    "iso3": "LUX",
+    "aigs_score": null,
+    "movement_regulation_score": 19.8,
+    "digital_surveillance_score": 9.9
+  },
+  {
+    "country": "Madagascar",
+    "iso3": "MDG",
+    "aigs_score": 25,
+    "movement_regulation_score": 43.4,
+    "digital_surveillance_score": 36.3
+  },
+  {
+    "country": "Malawi",
+    "iso3": "MWI",
+    "aigs_score": null,
+    "movement_regulation_score": 29.8,
+    "digital_surveillance_score": 23.1
+  },
+  {
+    "country": "Malaysia",
+    "iso3": "MYS",
+    "aigs_score": 100,
+    "movement_regulation_score": 32.3,
+    "digital_surveillance_score": 33.7
+  },
+  {
+    "country": "Maldives",
+    "iso3": "MDV",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 35.1
+  },
+  {
+    "country": "Mali",
+    "iso3": "MLI",
+    "aigs_score": null,
+    "movement_regulation_score": 39.3,
+    "digital_surveillance_score": 29.9
+  },
+  {
+    "country": "Malta",
+    "iso3": "MLT",
+    "aigs_score": 75,
+    "movement_regulation_score": 21.2,
+    "digital_surveillance_score": 22.7
+  },
+  {
+    "country": "Mauritania",
+    "iso3": "MRT",
+    "aigs_score": null,
+    "movement_regulation_score": 40.5,
+    "digital_surveillance_score": 41
+  },
+  {
+    "country": "Mauritius",
+    "iso3": "MUS",
+    "aigs_score": 50,
+    "movement_regulation_score": 27.8,
+    "digital_surveillance_score": 39.3
+  },
+  {
+    "country": "Mexico",
+    "iso3": "MEX",
+    "aigs_score": 75,
+    "movement_regulation_score": 36.4,
+    "digital_surveillance_score": 24.1
+  },
+  {
+    "country": "Moldova",
+    "iso3": "MDA",
+    "aigs_score": 25,
+    "movement_regulation_score": 29,
+    "digital_surveillance_score": 14.3
+  },
+  {
+    "country": "Mongolia",
+    "iso3": "MNG",
+    "aigs_score": 50,
+    "movement_regulation_score": 35,
+    "digital_surveillance_score": 17.7
+  },
+  {
+    "country": "Montenegro",
+    "iso3": "MNE",
+    "aigs_score": null,
+    "movement_regulation_score": 24.5,
+    "digital_surveillance_score": 26.6
+  },
+  {
+    "country": "Morocco",
+    "iso3": "MAR",
+    "aigs_score": 100,
+    "movement_regulation_score": 39.1,
+    "digital_surveillance_score": 52.3
+  },
+  {
+    "country": "Mozambique",
+    "iso3": "MOZ",
+    "aigs_score": null,
+    "movement_regulation_score": 33.6,
+    "digital_surveillance_score": 24.6
+  },
+  {
+    "country": "Myanmar",
+    "iso3": "MMR",
+    "aigs_score": 50,
+    "movement_regulation_score": 65.4,
+    "digital_surveillance_score": 79.2
+  },
+  {
+    "country": "Namibia",
+    "iso3": "NAM",
+    "aigs_score": 50,
+    "movement_regulation_score": 31.9,
+    "digital_surveillance_score": 20.5
+  },
+  {
+    "country": "Nepal",
+    "iso3": "NPL",
+    "aigs_score": null,
+    "movement_regulation_score": 35.8,
+    "digital_surveillance_score": 45.9
+  },
+  {
+    "country": "Netherlands",
+    "iso3": "NLD",
+    "aigs_score": 75,
+    "movement_regulation_score": 21.7,
+    "digital_surveillance_score": 8.6
+  },
+  {
+    "country": "New Zealand",
+    "iso3": "NZL",
+    "aigs_score": 50,
+    "movement_regulation_score": 15.6,
+    "digital_surveillance_score": 10.5
+  },
+  {
+    "country": "Nicaragua",
+    "iso3": "NIC",
+    "aigs_score": null,
+    "movement_regulation_score": 48.2,
+    "digital_surveillance_score": 76.5
+  },
+  {
+    "country": "Niger",
+    "iso3": "NER",
+    "aigs_score": null,
+    "movement_regulation_score": 30.1,
+    "digital_surveillance_score": 45
+  },
+  {
+    "country": "Nigeria",
+    "iso3": "NGA",
+    "aigs_score": 50,
+    "movement_regulation_score": 34.9,
+    "digital_surveillance_score": 32.3
+  },
+  {
+    "country": "North Korea",
+    "iso3": "PRK",
+    "aigs_score": 25,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 100
+  },
+  {
+    "country": "North Macedonia",
+    "iso3": "MKD",
+    "aigs_score": null,
+    "movement_regulation_score": 22,
+    "digital_surveillance_score": 25
+  },
+  {
+    "country": "Norway",
+    "iso3": "NOR",
+    "aigs_score": null,
+    "movement_regulation_score": 26.2,
+    "digital_surveillance_score": 4.1
+  },
+  {
+    "country": "Oman",
+    "iso3": "OMN",
+    "aigs_score": null,
+    "movement_regulation_score": 41.5,
+    "digital_surveillance_score": 54.8
+  },
+  {
+    "country": "Pakistan",
+    "iso3": "PAK",
+    "aigs_score": 100,
+    "movement_regulation_score": 46.9,
+    "digital_surveillance_score": 49.6
+  },
+  {
+    "country": "Palestine",
+    "iso3": "PSE",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 38.7
+  },
+  {
+    "country": "Panama",
+    "iso3": "PAN",
+    "aigs_score": 75,
+    "movement_regulation_score": 36.3,
+    "digital_surveillance_score": 17.7
+  },
+  {
+    "country": "Papua New Guinea",
+    "iso3": "PNG",
+    "aigs_score": 25,
+    "movement_regulation_score": 38.1,
+    "digital_surveillance_score": 16.9
+  },
+  {
+    "country": "Paraguay",
+    "iso3": "PRY",
+    "aigs_score": 25,
+    "movement_regulation_score": 36.6,
+    "digital_surveillance_score": 17.9
+  },
+  {
+    "country": "Peru",
+    "iso3": "PER",
+    "aigs_score": 50,
+    "movement_regulation_score": 34.1,
+    "digital_surveillance_score": 15.5
+  },
+  {
+    "country": "Philippines",
+    "iso3": "PHL",
+    "aigs_score": 100,
+    "movement_regulation_score": 29.6,
+    "digital_surveillance_score": 44.5
+  },
+  {
+    "country": "Poland",
+    "iso3": "POL",
+    "aigs_score": 25,
+    "movement_regulation_score": 24.6,
+    "digital_surveillance_score": 20.7
+  },
+  {
+    "country": "Portugal",
+    "iso3": "PRT",
+    "aigs_score": null,
+    "movement_regulation_score": 33.9,
+    "digital_surveillance_score": 0
+  },
+  {
+    "country": "Qatar",
+    "iso3": "QAT",
+    "aigs_score": 75,
+    "movement_regulation_score": 46.4,
+    "digital_surveillance_score": 58.8
+  },
+  {
+    "country": "Romania",
+    "iso3": "ROU",
+    "aigs_score": 50,
+    "movement_regulation_score": 34.7,
+    "digital_surveillance_score": 14.8
+  },
+  {
+    "country": "Russian Federation",
+    "iso3": "RUS",
+    "aigs_score": 100,
+    "movement_regulation_score": 42.3,
+    "digital_surveillance_score": 54.8
+  },
+  {
+    "country": "Rwanda",
+    "iso3": "RWA",
+    "aigs_score": null,
+    "movement_regulation_score": 43.4,
+    "digital_surveillance_score": 49.4
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "iso3": "STP",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 17.2
+  },
+  {
+    "country": "Saudi Arabia",
+    "iso3": "SAU",
+    "aigs_score": 100,
+    "movement_regulation_score": 56,
+    "digital_surveillance_score": 68.1
+  },
+  {
+    "country": "Senegal",
+    "iso3": "SEN",
+    "aigs_score": null,
+    "movement_regulation_score": 37.5,
+    "digital_surveillance_score": 25.4
+  },
+  {
+    "country": "Serbia",
+    "iso3": "SRB",
+    "aigs_score": 75,
+    "movement_regulation_score": 26.7,
+    "digital_surveillance_score": 35.3
+  },
+  {
+    "country": "Seychelles",
+    "iso3": "SYC",
+    "aigs_score": null,
+    "movement_regulation_score": 26.8,
+    "digital_surveillance_score": 22.6
+  },
+  {
+    "country": "Sierra Leone",
+    "iso3": "SLE",
+    "aigs_score": null,
+    "movement_regulation_score": 36.8,
+    "digital_surveillance_score": 29.4
+  },
+  {
+    "country": "Singapore",
+    "iso3": "SGP",
+    "aigs_score": 75,
+    "movement_regulation_score": 16.9,
+    "digital_surveillance_score": 36.5
+  },
+  {
+    "country": "Slovak Republic",
+    "iso3": "SVK",
+    "aigs_score": null,
+    "movement_regulation_score": 25.5,
+    "digital_surveillance_score": 9
+  },
+  {
+    "country": "Slovenia",
+    "iso3": "SVN",
+    "aigs_score": 25,
+    "movement_regulation_score": 26.4,
+    "digital_surveillance_score": 16.5
+  },
+  {
+    "country": "Solomon Islands",
+    "iso3": "SLB",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 20
+  },
+  {
+    "country": "Somalia",
+    "iso3": "SOM",
+    "aigs_score": null,
+    "movement_regulation_score": 58.5,
+    "digital_surveillance_score": 54
+  },
+  {
+    "country": "South Africa",
+    "iso3": "ZAF",
+    "aigs_score": 100,
+    "movement_regulation_score": 37.2,
+    "digital_surveillance_score": 17.8
+  },
+  {
+    "country": "South Sudan",
+    "iso3": "SSD",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 76.8
+  },
+  {
+    "country": "Spain",
+    "iso3": "ESP",
+    "aigs_score": 75,
+    "movement_regulation_score": 31.2,
+    "digital_surveillance_score": 11.1
+  },
+  {
+    "country": "Sri Lanka",
+    "iso3": "LKA",
+    "aigs_score": 75,
+    "movement_regulation_score": 32.3,
+    "digital_surveillance_score": 44.7
+  },
+  {
+    "country": "Sudan",
+    "iso3": "SDN",
+    "aigs_score": null,
+    "movement_regulation_score": 60.4,
+    "digital_surveillance_score": 67.6
+  },
+  {
+    "country": "Suriname",
+    "iso3": "SUR",
+    "aigs_score": null,
+    "movement_regulation_score": 36.3,
+    "digital_surveillance_score": 19.5
+  },
+  {
+    "country": "Sweden",
+    "iso3": "SWE",
+    "aigs_score": 50,
+    "movement_regulation_score": 20,
+    "digital_surveillance_score": 3.1
+  },
+  {
+    "country": "Switzerland",
+    "iso3": "CHE",
+    "aigs_score": 50,
+    "movement_regulation_score": 19.5,
+    "digital_surveillance_score": 4.2
+  },
+  {
+    "country": "Syrian Arab Republic",
+    "iso3": "SYR",
+    "aigs_score": null,
+    "movement_regulation_score": 73.7,
+    "digital_surveillance_score": 69.9
+  },
+  {
+    "country": "Taiwan",
+    "iso3": "TWN",
+    "aigs_score": 25,
+    "movement_regulation_score": 21.5,
+    "digital_surveillance_score": 22.5
+  },
+  {
+    "country": "Tajikistan",
+    "iso3": "TJK",
+    "aigs_score": 75,
+    "movement_regulation_score": 35,
+    "digital_surveillance_score": 70.6
+  },
+  {
+    "country": "Tanzania",
+    "iso3": "TZA",
+    "aigs_score": null,
+    "movement_regulation_score": 29.3,
+    "digital_surveillance_score": 44.5
+  },
+  {
+    "country": "Thailand",
+    "iso3": "THA",
+    "aigs_score": 75,
+    "movement_regulation_score": 33.5,
+    "digital_surveillance_score": 45.1
+  },
+  {
+    "country": "Timor-Leste",
+    "iso3": "TLS",
+    "aigs_score": null,
+    "movement_regulation_score": 38,
+    "digital_surveillance_score": 22.5
+  },
+  {
+    "country": "Togo",
+    "iso3": "TGO",
+    "aigs_score": null,
+    "movement_regulation_score": 37.5,
+    "digital_surveillance_score": 47.7
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "iso3": "TTO",
+    "aigs_score": null,
+    "movement_regulation_score": 30.6,
+    "digital_surveillance_score": 16.3
+  },
+  {
+    "country": "Tunisia",
+    "iso3": "TUN",
+    "aigs_score": 25,
+    "movement_regulation_score": 40.6,
+    "digital_surveillance_score": 25.2
+  },
+  {
+    "country": "Turkey",
+    "iso3": "TUR",
+    "aigs_score": 100,
+    "movement_regulation_score": 47.7,
+    "digital_surveillance_score": 61.3
+  },
+  {
+    "country": "Turkmenistan",
+    "iso3": "TKM",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 90.9
+  },
+  {
+    "country": "Uganda",
+    "iso3": "UGA",
+    "aigs_score": 75,
+    "movement_regulation_score": 34.6,
+    "digital_surveillance_score": 55.9
+  },
+  {
+    "country": "Ukraine",
+    "iso3": "UKR",
+    "aigs_score": 50,
+    "movement_regulation_score": 41.8,
+    "digital_surveillance_score": 39.7
+  },
+  {
+    "country": "United Arab Emirates",
+    "iso3": "ARE",
+    "aigs_score": 100,
+    "movement_regulation_score": 39.1,
+    "digital_surveillance_score": 70.7
+  },
+  {
+    "country": "United Kingdom",
+    "iso3": "GBR",
+    "aigs_score": 100,
+    "movement_regulation_score": 31.3,
+    "digital_surveillance_score": 21.2
+  },
+  {
+    "country": "United States",
+    "iso3": "USA",
+    "aigs_score": 100,
+    "movement_regulation_score": 26.5,
+    "digital_surveillance_score": 24.2
+  },
+  {
+    "country": "Uruguay",
+    "iso3": "URY",
+    "aigs_score": 75,
+    "movement_regulation_score": 34.2,
+    "digital_surveillance_score": 9.7
+  },
+  {
+    "country": "Uzbekistan",
+    "iso3": "UZB",
+    "aigs_score": 50,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 60.1
+  },
+  {
+    "country": "Vanuatu",
+    "iso3": "VUT",
+    "aigs_score": null,
+    "movement_regulation_score": null,
+    "digital_surveillance_score": 10.6
+  },
+  {
+    "country": "Venezuela, RB",
+    "iso3": "VEN",
+    "aigs_score": 25,
+    "movement_regulation_score": 61.1,
+    "digital_surveillance_score": 72
+  },
+  {
+    "country": "Vietnam",
+    "iso3": "VNM",
+    "aigs_score": 25,
+    "movement_regulation_score": 41.7,
+    "digital_surveillance_score": 54.8
+  },
+  {
+    "country": "Yemen, Rep.",
+    "iso3": "YEM",
+    "aigs_score": null,
+    "movement_regulation_score": 68.5,
+    "digital_surveillance_score": 68.2
+  },
+  {
+    "country": "Zambia",
+    "iso3": "ZMB",
+    "aigs_score": 50,
+    "movement_regulation_score": 36,
+    "digital_surveillance_score": 43.8
+  },
+  {
+    "country": "Zimbabwe",
+    "iso3": "ZWE",
+    "aigs_score": 50,
+    "movement_regulation_score": 49.1,
+    "digital_surveillance_score": 57.6
+  }
+]
