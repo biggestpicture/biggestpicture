@@ -1,14 +1,29 @@
 # Methodology
 
-The Biggest Picture is a composite heat map combining three independently
-published, independently maintained datasets into one directional score per
-country. It is **not** a peer-reviewed index in its own right — the blend,
-the equal weighting, and the 0–100 normalization are choices made for this
-project. Cite the three underlying sources individually for any claim that
-needs to withstand scrutiny; cite this composite only as an original
-visualization built on top of them.
+The Biggest Picture publishes two independent datasets, deliberately kept
+separate rather than blended into one:
 
-## The three axes
+1. **The composite index** (`data/composite/`) — three existing academic
+   indices blended into one directional score per country. Broad coverage
+   (up to 179 countries), but only as current as its 2021–2022 source data,
+   and inherits the scope/limits of institutions that built those indices.
+2. **Primary Questions** (`data/questions/`) — 9 specific, concrete
+   questions per country, each answered with a graded value, a plain-English
+   note, and at least one directly-checkable source citation, filled in
+   through open contribution rather than borrowed from an existing index.
+   Narrow coverage today (7 countries, more will be added by contributors)
+   but every claim traces to a source a reader can click and verify
+   themselves in under a minute — that traceability, not breadth, is the
+   point of this dataset.
+
+Neither is a peer-reviewed index in its own right. Cite the underlying
+sources individually for any claim that needs to withstand scrutiny; cite
+this project only as an original visualization/compilation built on top of
+them.
+
+## Dataset 1: Composite Index
+
+### The three axes
 
 ### 1. AI Surveillance Deployment
 
@@ -99,9 +114,89 @@ never a silent edit to a past release. The file
 `data/composite/biggestpicture-scores-2021-2022.json` is named for the source
 data's vintage, not the release date; the release tag is the citable version.
 
-## Adding a new axis
+## Adding a new axis to the composite
 
 See `GOVERNANCE.md` for the RFC process. In short: a new axis needs a
 public, citable source methodology, machine-readable data, and sign-off from
 at least two maintainers from different countries/institutions before it's
 merged.
+
+## Dataset 2: Primary Questions
+
+A different approach from the composite index: instead of borrowing scores
+from existing institutional indices, this dataset asks 9 specific factual
+questions directly, per country, each with its own citation — sourced
+through open contribution rather than any single organization's
+methodology. This is the concrete mechanism behind "decentralized sourcing"
+for this project: no single institution decides the answer, anyone can
+submit one with a source, anyone can dispute one with a better source, and
+the full history of who changed what is public in git.
+
+### The 9 questions
+
+Full question text and grading rubric live in `data/questions/questions.json`
+— read it before contributing, several questions aren't as binary as they
+look (e.g. "mandatory schooling" is nearly universal, so the real signal
+captured is homeschooling legality, not the top-line yes/no). In brief:
+
+1. Is there a digital ID in place? — and is its architecture centralized
+   (state-held database) or decentralized (citizen-held credential)?
+2. Is it (still) possible to pay in cash?
+3. Is there mandatory schooling? — specifically, is homeschooling legal?
+4. Is there a social credit system? — a unified, government-operated
+   citizen trust score with real consequences, not private credit bureaus
+   or fragmented sectoral blacklists.
+5. Can I trade in alternative currencies like crypto, gold, etc.?
+6. Are there mandatory insurances?
+7. Are there travel restrictions?
+8. Are there restrictions of internet access?
+9. Is there free speech?
+
+### Answer format
+
+Each answer is graded `yes` / `partial` / `no` / `unclear`, with a mandatory
+note (specific facts, not a restatement of the question) and at least one
+source URL. Schema enforced in `data/questions/schema.json` and checked by
+`data/questions/validate.js` in CI on every pull request that touches
+`data/questions/`.
+
+### Deliberately not scored
+
+Unlike the composite index, these 9 answers are **not** blended into a
+single number. Several are genuinely double-edged rather than simply
+good-or-bad — a national digital ID can be citizen-empowering (Estonia's
+e-ID: cryptographic credential held on the citizen's own chip, used for
+legally-binding digital signatures) or surveillance-enabling (a centralized
+biometric database queried by the state) depending entirely on its
+architecture, and collapsing that into one number would hide the judgment
+call rather than make it honestly. Read the note field; it carries the
+actual content, not the value field alone.
+
+### Coverage and seeding
+
+Seeded with 7 countries — United States, Germany, Sweden, Estonia, China,
+North Korea, Nigeria — chosen for contrast (federal/mixed systems, a
+cashless-leaning democracy, a digital-ID pioneer, an authoritarian
+tech-heavy state, the most closed state documented, and a large non-Western,
+non-G7 democracy) to prove the format works across very different contexts
+before opening it to contributors for the remaining 170+. See
+`CONTRIBUTING.md` for how to add or dispute a country entry.
+
+Two grading notes worth flagging explicitly, since both cut against popular
+narrative and are easy to get wrong from memory rather than sourced research:
+
+- **China's social credit system** is graded `partial`, not `yes` — current
+  research (Merics) finds no unified national personal score exists; the
+  system is fragmented, lowly digitalized, and mostly targets businesses.
+  Central authorities explicitly rejected personal-penalty scoring pilots by
+  2019. Commercial products like Sesame Credit are private and voluntary,
+  distinct from any government system. The popular Western "Black Mirror"
+  characterization of a single unified citizen score is not what the
+  documented evidence shows.
+- **North Korea's songbun system** is graded `yes` for social credit — a
+  hereditary, state-operated caste classification assigned at birth based on
+  family political loyalty, with severe documented real-world consequences
+  and no digital scoring involved. Structurally different from a "credit
+  score" but squarely meets this project's grading rubric for a
+  government-operated system that scores/rates citizens with real
+  consequences tied to the rating.

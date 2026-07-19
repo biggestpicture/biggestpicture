@@ -1,0 +1,73 @@
+{
+  "iso3": "SWE",
+  "country": "Sweden",
+  "last_reviewed": "2026-07-19",
+  "answers": {
+    "digital_id": {
+      "value": "partial",
+      "note": "There is no government-run national digital ID in active use yet. The near-universal eID in daily use, BankID (99.7% penetration, ~8.7 million users, required de facto for most bank and many government e-services), is developed, owned, and operated by a private consortium of seven Swedish banks (Finansiell ID-Teknik BID AB) — not the state. A genuine state-issued alternative, 'Sverige-ID,' tied to the national ID card and built by the government agency Digg with the Swedish Police, only opens for applications from December 1, 2026, and will be voluntary rather than mandatory.",
+      "sources": [
+        {"url": "https://www.biometricupdate.com/202603/sweden-to-launch-government-eid-in-december-2026", "title": "Sweden to launch government eID in December 2026 | Biometric Update", "accessed": "2026-07-19"},
+        {"url": "https://www.riksbank.se/en-gb/payments--cash/payments-in-sweden/payments-report-2026/how-safe-efficient-and-accessible-are-payments/government-e-identification-as-an-alternative-to-bankid-for-payments-is-positive/", "title": "Government e-identification as an alternative to BankID for payments is positive | Sveriges Riksbank", "accessed": "2026-07-19"}
+      ]
+    },
+    "cash_payment": {
+      "value": "partial",
+      "note": "Banknotes and coins issued by the Riksbank are legal tender, but Swedish law prioritizes 'freedom of contract,' letting merchants — and even banks — refuse cash, which is a key driver of Sweden's rapid shift toward cashlessness. The Riksbank has since reversed its earlier cashless enthusiasm and now calls for urgent legislation to guarantee cash access, warning that Sweden's cash infrastructure has become 'dangerously fragile.'",
+      "sources": [
+        {"url": "https://blogs.loc.gov/law/2017/10/falqs-cashless-sweden/", "title": "FALQs: Cashless Sweden | In Custodia Legis, Library of Congress", "accessed": "2026-07-19"},
+        {"url": "https://www.globalgovernmentfinance.com/swedens-central-bank-calls-for-urgent-strengthening-of-cash-in-legislation/", "title": "Sweden's central bank calls for 'urgent' strengthening of cash in legislation", "accessed": "2026-07-19"}
+      ]
+    },
+    "mandatory_schooling": {
+      "value": "yes",
+      "note": "Compulsory school attendance applies to children under 16, and a 2011 change to the Education Act (Skollag) made homeschooling illegal except in extraordinary, year-by-year-approved circumstances; Swedish officials defend the ban by arguing state schooling is comprehensive and objective. Enforcement has included fines, litigation, and in some cases removal of children from the home.",
+      "sources": [
+        {"url": "https://hslda.org/post/sweden", "title": "Sweden | HSLDA", "accessed": "2026-07-19"}
+      ]
+    },
+    "social_credit": {
+      "value": "no",
+      "note": "No government social-credit score exists. Private bureaus (UC, Creditsafe/Bisnode) provide financial credit scores only. A viral 2015 blog post that falsely conflated Sweden's private credit-check practices with a Chinese-style state social-credit system was later deleted and corrected by its own author (Rick Falkvinge). Separately, Sweden's welfare agency (Försäkringskassan) uses an algorithmic fraud-risk-scoring tool for benefits applicants, which Amnesty International has criticized as discriminatory — a narrow fraud-detection tool, not a unified citizen trust score.",
+      "sources": [
+        {"url": "https://www.amnesty.org/en/latest/news/2024/11/sweden-authorities-must-discontinue-discriminatory-ai-systems-used-by-welfare-agency/", "title": "Sweden: Authorities must discontinue discriminatory AI systems used by welfare agency | Amnesty International", "accessed": "2026-07-19"}
+      ]
+    },
+    "alt_currency": {
+      "value": "yes",
+      "note": "Cryptocurrency is legal; individuals may buy, hold, and trade freely, while crypto-asset service providers must be authorized by Finansinspektionen (the Swedish FSA) under the EU's MiCA framework. From 2026, Swedish exchanges must also report user transactions to the tax agency Skatteverket under the EU's Crypto-Asset Reporting Framework (CARF/DAC8). No restrictions on gold or precious-metals ownership were found.",
+      "sources": [
+        {"url": "https://www.globalvatcompliance.com/globalvatnews/sweden-crypto-reporting-law/", "title": "Sweden: Crypto Reporting Law to Begin in 2026 | Global VAT Compliance", "accessed": "2026-07-19"}
+      ]
+    },
+    "mandatory_insurance": {
+      "value": "yes",
+      "note": "Healthcare is universal and effectively compulsory via general taxation: all legal residents are automatically covered by the tax-funded system (about 86% of health spending is public, under 1% is voluntary private insurance) rather than through an individual purchase mandate. Separately, third-party liability motor insurance (trafikförsäkring) is legally mandatory for every vehicle used on the road under the Motor Traffic Damage Act (1975:1410), enforced by the Swedish Association of Motor Insurers (TFF).",
+      "sources": [
+        {"url": "https://www.commonwealthfund.org/international-health-policy-center/countries/sweden", "title": "Sweden | Commonwealth Fund", "accessed": "2026-07-19"},
+        {"url": "https://www.transportstyrelsen.se/en/road/vehicles/compulsory-road-traffic-insurance/", "title": "Compulsory road traffic insurance | Transportstyrelsen (Swedish Transport Agency)", "accessed": "2026-07-19"}
+      ]
+    },
+    "travel_restrictions": {
+      "value": "partial",
+      "note": "Freedom of movement is legally guaranteed and generally respected in practice, but Sweden is among 11 Schengen states that reintroduced internal border controls in 2026 (extended from 12 November 2025 to 11 May 2026), citing cross-border organized crime linked to state actors and terrorism threats — checks apply at borders but do not amount to a general restriction on residents' movement.",
+      "sources": [
+        {"url": "https://www.government.se/press-releases/2026/01/continued-need-for-border-controls-at-internal-border/", "title": "Continued need for border controls at internal border | Government.se", "accessed": "2026-07-19"}
+      ]
+    },
+    "internet_restrictions": {
+      "value": "no",
+      "note": "There is no broad government-mandated blocking of websites or platforms in Sweden; all major international services (streaming, social media, messaging, news) are freely accessible, and there is no law compelling ISPs to block sites generally. The only notable filtering is narrow and voluntary: major ISPs run a DNS filter, developed with police, targeting sites hosting child sexual abuse material.",
+      "sources": [
+        {"url": "https://proprivacy.com/guides/swedish-privacy", "title": "Internet Censorship in Sweden | Staying secure online, ProPrivacy", "accessed": "2026-07-19"}
+      ]
+    },
+    "free_speech": {
+      "value": "yes",
+      "note": "Sweden ranks 5th of 180 countries in RSF's 2026 World Press Freedom Index (score 87.61); it enacted the world's first press freedom law in 1766, and media are constitutionally independent of political power. Journalists nonetheless report online harassment and hate campaigns (almost one in five report having been harassed), which RSF flags as a practical challenge even though legal protections remain strong.",
+      "sources": [
+        {"url": "https://rsf.org/en/country/sweden", "title": "Sweden | RSF", "accessed": "2026-07-19"}
+      ]
+    }
+  }
+}

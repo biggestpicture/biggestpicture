@@ -63,6 +63,15 @@
   .header .tag { font-size: 12px; color: var(--text-muted); margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.04em; }
   .header p.sub { font-size: 13px; color: var(--text-secondary); margin: 0 0 18px; max-width: 72ch; line-height: 1.5; }
 
+  .dataset-tabs { display: flex; gap: 4px; margin-bottom: 14px; border-bottom: 1px solid var(--border); }
+  .dataset-tab-btn {
+    font: inherit; font-size: 13.5px; font-weight: 600; padding: 8px 14px; border: none;
+    background: transparent; color: var(--text-secondary); cursor: pointer;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+  }
+  .dataset-tab-btn[aria-pressed="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+  .dataset-tab-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
   .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
   .tabs { display: flex; gap: 4px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px; padding: 3px; }
   .tab-btn {
@@ -116,6 +125,37 @@
   table#data-table tbody tr:hover { background: var(--page); }
   .table-wrap { max-height: 520px; overflow: auto; border: 1px solid var(--border); border-radius: 8px; }
 
+  .q-table-wrap { max-height: 560px; overflow: auto; border: 1px solid var(--border); border-radius: 8px; }
+  table#q-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table#q-table caption { display: none; }
+  table#q-table th, table#q-table td { padding: 8px 10px; border-bottom: 1px solid var(--gridline); text-align: left; white-space: nowrap; }
+  table#q-table thead th { color: var(--text-secondary); font-weight: 600; background: var(--surface-1); position: sticky; top: 0; z-index: 1; font-size: 11.5px; }
+  table#q-table thead th:first-child { left: 0; z-index: 2; }
+  table#q-table tbody th { position: sticky; left: 0; background: var(--surface-1); font-weight: 600; color: var(--text-primary); z-index: 1; }
+  table#q-table tbody tr:hover td, table#q-table tbody tr:hover th { background: var(--page); }
+
+  .q-badge {
+    font: inherit; font-size: 11.5px; font-weight: 600; padding: 4px 10px; border-radius: 999px;
+    cursor: pointer; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-secondary);
+  }
+  .q-badge:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-badge.q-yes { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .q-badge.q-partial { background: transparent; border: 1.5px dashed var(--accent); color: var(--accent); }
+  .q-badge.q-no { background: transparent; color: var(--text-muted); }
+  .q-badge.q-unclear { background: transparent; color: var(--text-muted); border-style: dotted; }
+  .q-badge.q-active { box-shadow: 0 0 0 2px var(--accent); }
+
+  .q-detail {
+    margin-top: 14px; padding: 14px 16px; border: 1px solid var(--border); border-radius: 8px;
+    background: var(--page); font-size: 13px; line-height: 1.6;
+  }
+  .q-detail h4 { margin: 0 0 4px; font-size: 14px; color: var(--text-primary); }
+  .q-detail .q-detail-question { color: var(--text-secondary); font-size: 12.5px; margin: 0 0 10px; }
+  .q-detail .q-detail-value { display: inline-block; margin-bottom: 8px; }
+  .q-detail .q-detail-note { color: var(--text-primary); margin: 0 0 10px; }
+  .q-detail .q-detail-sources { margin: 0; padding-left: 18px; font-size: 12px; color: var(--text-secondary); }
+  .q-detail .q-detail-sources a { color: var(--accent); }
+
   details.methodology { margin-top: 16px; font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
   details.methodology summary { cursor: pointer; font-weight: 600; color: var(--text-primary); padding: 4px 0; }
   details.methodology h4 { font-size: 12.5px; color: var(--text-primary); margin: 12px 0 4px; }
@@ -139,48 +179,69 @@
   <div class="header">
     <p class="tag">The Biggest Picture</p>
     <h1>Global State Control &amp; Surveillance Heat Map</h1>
-    <p class="sub">A composite heat map combining three independently published indices into one directional score per country: AI surveillance deployment, movement &amp; regulatory/permitting restriction, and digital surveillance &amp; censorship. Higher = more state control. Named for the fable of the frog in slowly heating water &mdash; each individual measure looks survivable up close; the point of this project is to step back far enough to see the whole pot. This is an original open-data blend, not a published index &mdash; read the methodology before citing it.</p>
+    <p class="sub">Two independent datasets: a <strong>composite heat map</strong> blending three published indices into one directional score per country, and <strong>Primary Questions</strong> &mdash; 9 concrete, plain-language questions per country, each answer cited to a source you can check yourself, built entirely through open contribution. Named for the fable of the frog in slowly heating water &mdash; each individual measure looks survivable up close; the point of this project is to step back far enough to see the whole pot. Not a published index &mdash; read the methodology before citing either dataset.</p>
   </div>
 
-  <div class="controls">
-    <div class="tabs" role="tablist" aria-label="Score axis">
-      <button class="tab-btn" role="tab" data-mode="composite" aria-pressed="true">Composite</button>
-      <button class="tab-btn" role="tab" data-mode="aigs" aria-pressed="false">AI Surveillance</button>
-      <button class="tab-btn" role="tab" data-mode="move" aria-pressed="false">Movement &amp; Regulatory</button>
-      <button class="tab-btn" role="tab" data-mode="digi" aria-pressed="false">Digital Surveillance</button>
-    </div>
-    <button class="view-toggle" id="view-toggle" aria-pressed="false">View as table</button>
+  <div class="dataset-tabs" role="tablist" aria-label="Dataset">
+    <button class="dataset-tab-btn" role="tab" data-dataset="composite" aria-pressed="true">Composite Index</button>
+    <button class="dataset-tab-btn" role="tab" data-dataset="questions" aria-pressed="false">Primary Questions</button>
   </div>
 
-  <div class="card">
-    <div class="legend">
-      <span>Less control</span>
-      <span class="ramp" role="img" aria-label="Sequential scale from light blue, less control, to dark blue, more control"></span>
-      <span>More control</span>
-      <span style="margin-left:8px;"><span class="swatch"></span> No data</span>
+  <div id="composite-panel">
+    <div class="controls">
+      <div class="tabs" role="tablist" aria-label="Score axis">
+        <button class="tab-btn" role="tab" data-mode="composite" aria-pressed="true">Composite</button>
+        <button class="tab-btn" role="tab" data-mode="aigs" aria-pressed="false">AI Surveillance</button>
+        <button class="tab-btn" role="tab" data-mode="move" aria-pressed="false">Movement &amp; Regulatory</button>
+        <button class="tab-btn" role="tab" data-mode="digi" aria-pressed="false">Digital Surveillance</button>
+      </div>
+      <button class="view-toggle" id="view-toggle" aria-pressed="false">View as table</button>
     </div>
 
-    <div id="map-view">
-      <svg id="map" viewBox="0 0 __VB_W__ __VB_H__" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map of state control and surveillance scores by country">
+    <div class="card">
+      <div class="legend">
+        <span>Less control</span>
+        <span class="ramp" role="img" aria-label="Sequential scale from light blue, less control, to dark blue, more control"></span>
+        <span>More control</span>
+        <span style="margin-left:8px;"><span class="swatch"></span> No data</span>
+      </div>
+
+      <div id="map-view">
+        <svg id="map" viewBox="0 0 __VB_W__ __VB_H__" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map of state control and surveillance scores by country">
 __PATHS__
-      </svg>
-    </div>
+        </svg>
+      </div>
 
-    <div id="table-view" class="table-wrap" style="display:none;">
-      <table id="data-table">
-        <caption>State control and surveillance scores by country</caption>
+      <div id="table-view" class="table-wrap" style="display:none;">
+        <table id="data-table">
+          <caption>State control and surveillance scores by country</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-key="name" tabindex="0">Country</th>
+              <th scope="col" data-key="composite" tabindex="0">Composite</th>
+              <th scope="col" data-key="aigs" tabindex="0">AI Surveillance</th>
+              <th scope="col" data-key="move" tabindex="0">Movement &amp; Regulatory</th>
+              <th scope="col" data-key="digi" tabindex="0">Digital Surveillance</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="questions-panel" class="card" style="display:none;">
+    <p class="sub" style="margin:0 0 14px;">9 questions per country, each answer cited to a source you can check yourself. Click any cell for the full note and sources. This is deliberately <strong>not scored</strong> &mdash; several questions cut both ways depending on how a measure is implemented, see the note on each answer. Only <span id="q-country-count">0</span> of 179+ countries are filled in &mdash; <a href="https://github.com/biggestpicture/biggestpicture/blob/main/CONTRIBUTING.md">help add more</a>.</p>
+    <div class="q-table-wrap">
+      <table id="q-table">
+        <caption>Primary Questions answers by country</caption>
         <thead>
-          <tr>
-            <th scope="col" data-key="name" tabindex="0">Country</th>
-            <th scope="col" data-key="composite" tabindex="0">Composite</th>
-            <th scope="col" data-key="aigs" tabindex="0">AI Surveillance</th>
-            <th scope="col" data-key="move" tabindex="0">Movement &amp; Regulatory</th>
-            <th scope="col" data-key="digi" tabindex="0">Digital Surveillance</th>
-          </tr>
+          <tr id="q-table-head"></tr>
         </thead>
-        <tbody id="table-body"></tbody>
+        <tbody id="q-table-body"></tbody>
       </table>
     </div>
+    <div id="q-detail" class="q-detail" hidden></div>
   </div>
 
   <details class="methodology">
@@ -191,6 +252,8 @@ __PATHS__
       <li><strong>Movement &amp; Regulatory Restriction</strong> &mdash; Human Freedom Index 2023 edition (Cato/Fraser), 2021 data. Average of <code>pf_movement</code> and <code>ef_regulation</code> sub-indices, inverted so higher = more restricted.</li>
       <li><strong>Digital Surveillance &amp; Censorship</strong> &mdash; Feldstein/Carnegie Digital Repression Index 2021 (V-Dem-derived), min-max normalized 0&ndash;100.</li>
     </ul>
+    <h4>Primary Questions (second dataset)</h4>
+    <p>9 factual questions per country, community-sourced rather than borrowed from an existing index &mdash; each answer graded yes/partial/no/unclear with a mandatory note and citation, validated in CI. Deliberately not blended into a score. See <code>data/questions/questions.json</code> for the full grading rubric and <code>CONTRIBUTING.md</code> to add a country.</p>
     <p>Full methodology, including composite calculation, known limitations, funding-conflict disclosure for source data, and the data-corruption fix applied during ingestion, lives in <code>docs/methodology.md</code> &mdash; linked below.</p>
   </details>
 
@@ -205,6 +268,7 @@ __PATHS__
 <div id="tooltip" role="tooltip" aria-hidden="true"></div>
 
 <script id="country-data" type="application/json">__DATA__</script>
+<script id="questions-data" type="application/json">__QUESTIONS_DATA__</script>
 <script>
 (function () {
   var raw = JSON.parse(document.getElementById('country-data').textContent);
@@ -414,6 +478,118 @@ __PATHS__
 
   applyColors();
   renderTable();
+})();
+</script>
+<script>
+(function () {
+  var qRaw = JSON.parse(document.getElementById('questions-data').textContent);
+  var questions = qRaw.questions;
+  var qCountries = qRaw.countries;
+
+  document.getElementById('q-country-count').textContent = String(qCountries.length);
+
+  var VALUE_LABEL = { yes: 'Yes', partial: 'Partial', no: 'No', unclear: 'Unclear' };
+
+  var thead = document.getElementById('q-table-head');
+  var thCountry = document.createElement('th');
+  thCountry.scope = 'col';
+  thCountry.textContent = 'Country';
+  thead.appendChild(thCountry);
+  questions.forEach(function (q) {
+    var th = document.createElement('th');
+    th.scope = 'col';
+    th.title = q.text;
+    th.textContent = q.text.replace(/^Is there /i, '').replace(/^Is it /i, '').replace(/^Are there /i, '').replace(/^Can I /i, '').replace(/\?$/, '');
+    thead.appendChild(th);
+  });
+
+  var tbody = document.getElementById('q-table-body');
+  var detail = document.getElementById('q-detail');
+  var activeBadge = null;
+
+  function showDetail(country, question, answer, badgeEl) {
+    if (activeBadge) activeBadge.classList.remove('q-active');
+    activeBadge = badgeEl;
+    badgeEl.classList.add('q-active');
+
+    detail.innerHTML = '';
+    var h4 = document.createElement('h4');
+    h4.textContent = country.country;
+    detail.appendChild(h4);
+
+    var qp = document.createElement('p');
+    qp.className = 'q-detail-question';
+    qp.textContent = question.text;
+    detail.appendChild(qp);
+
+    var valSpan = document.createElement('span');
+    valSpan.className = 'q-badge q-detail-value q-' + answer.value;
+    valSpan.textContent = VALUE_LABEL[answer.value] || answer.value;
+    detail.appendChild(valSpan);
+
+    var note = document.createElement('p');
+    note.className = 'q-detail-note';
+    note.textContent = answer.note;
+    detail.appendChild(note);
+
+    var sources = document.createElement('ul');
+    sources.className = 'q-detail-sources';
+    answer.sources.forEach(function (s) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = s.url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.textContent = s.title;
+      li.appendChild(a);
+      li.appendChild(document.createTextNode(' — accessed ' + s.accessed));
+      sources.appendChild(li);
+    });
+    detail.appendChild(sources);
+
+    detail.hidden = false;
+    detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  qCountries.forEach(function (country) {
+    var tr = document.createElement('tr');
+    var th = document.createElement('th');
+    th.scope = 'row';
+    th.textContent = country.country;
+    tr.appendChild(th);
+
+    questions.forEach(function (q) {
+      var td = document.createElement('td');
+      var answer = country.answers[q.id];
+      if (!answer) {
+        td.textContent = String.fromCharCode(8212);
+      } else {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'q-badge q-' + answer.value;
+        btn.textContent = VALUE_LABEL[answer.value] || answer.value;
+        btn.addEventListener('click', (function (country, q, answer) {
+          return function (e) { showDetail(country, q, answer, e.currentTarget); };
+        })(country, q, answer));
+        td.appendChild(btn);
+      }
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+
+  var datasetTabs = document.querySelectorAll('.dataset-tab-btn');
+  var compositePanel = document.getElementById('composite-panel');
+  var questionsPanel = document.getElementById('questions-panel');
+  datasetTabs.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      datasetTabs.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+      btn.setAttribute('aria-pressed', 'true');
+      var which = btn.getAttribute('data-dataset');
+      compositePanel.style.display = which === 'composite' ? '' : 'none';
+      questionsPanel.style.display = which === 'questions' ? '' : 'none';
+    });
+  });
 })();
 </script>
 </body>

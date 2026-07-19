@@ -1,0 +1,76 @@
+{
+  "iso3": "PRK",
+  "country": "North Korea",
+  "last_reviewed": "2026-07-19",
+  "answers": {
+    "digital_id": {
+      "value": "partial",
+      "note": "There is no unified national 'digital ID' system in the sense of an e-government login credential. However, every citizen aged 17+ must hold a mandatory physical citizen ID smartcard, and the latest version requires fingerprints and photos (with reports of blood samples), effectively building a centralized state biometric database of the population. Separately, citizens use individual electronic certificates (obtained via post offices/authorized vendors) to authenticate for digital payments and money transfers — a narrow digital layer, not a general-purpose national digital identity. Everything is centralized and state-controlled; there is no decentralized or citizen-controlled option.",
+      "sources": [
+        {"url": "https://seap.nationalityforall.org/digital-id/regional-overview/east-asia/north-korea/", "title": "North Korea - Statelessness Encyclopedia Asia Pacific", "accessed": "2026-07-19"},
+        {"url": "https://www.dailynk.com/english/north-korea-issues-new-national-identification-cards-with-electronic-chips/", "title": "North Korea issues new national identification cards with electronic chips - Daily NK", "accessed": "2026-07-19"},
+        {"url": "https://www.stimson.org/2024/digital-surveillance-in-north-korea-moving-toward-a-panopticon-state/", "title": "Digital Surveillance in North Korea: Moving Toward a Panopticon State - Stimson Center", "accessed": "2026-07-19"}
+      ]
+    },
+    "cash_payment": {
+      "value": "yes",
+      "note": "Cash remains the dominant means of transaction for most North Koreans, who largely operate outside formal banking. The regime has shifted from a ration-based system to cash wages, and informal 'jangmadang' markets run heavily on cash (increasingly in Chinese yuan and US dollars alongside the won). Note significant instability: the won lost roughly two-thirds of its value against the dollar in the second half of 2024 and continued sliding into 2025-2026, and the state has been pushing e-wallet adoption (deposit points roughly quadrupled 2022-2025) partly as a way to pull hard currency cash out of private hands.",
+      "sources": [
+        {"url": "https://keia.org/the-peninsula/2025-year-in-review-kim-jong-uns-financial-conundrum/", "title": "2025 Year in Review: Kim Jong Un's Financial Conundrum - Korea Economic Institute of America", "accessed": "2026-07-19"},
+        {"url": "https://www.38north.org/2026/07/the-logistics-of-funding-north-korean-e-wallets/", "title": "The Logistics of Funding North Korean E-Wallets - 38 North", "accessed": "2026-07-19"}
+      ]
+    },
+    "mandatory_schooling": {
+      "value": "yes",
+      "note": "The 2012 Universal 12-Year Compulsory Education Ordinance mandates 12 years of state education for all children (ages ~5-17). Private schooling does not exist, foreign/international curricula are not permitted for DPRK citizens, and homeschooling is not legally recognized in any form — all children must attend state schools to ensure ideological conformity.",
+      "sources": [
+        {"url": "https://www.starpathlearning.com/library/homeschooling-in-asia", "title": "Homeschooling in Asia: Country-by-Country Guide for 2026 - Starpath Learning", "accessed": "2026-07-19"},
+        {"url": "https://en.wikipedia.org/wiki/Education_in_North_Korea", "title": "Education in North Korea", "accessed": "2026-07-19"}
+      ]
+    },
+    "social_credit": {
+      "value": "yes",
+      "note": "North Korea's 'songbun' system is a hereditary, state-operated classification assigning every citizen to one of three broad castes (core/wavering/hostile, ~50 sub-classifications) at birth based on family political loyalty going back generations. It carries severe, documented real-world consequences for housing, employment, university access, food allocation, marriage, and treatment by security services. Files are updated roughly every two years using intelligence gathered by neighborhood 'inminban' watch units (30-40 households each) with embedded informants; citizens cannot access or challenge their own file. This is a far more totalizing and consequential system than China's, though it predates and differs structurally from a digital 'credit score.'",
+      "sources": [
+        {"url": "https://www.hrnk.org/documentations/marked-for-life-songbun-north-koreas-social-classification-system/", "title": "Marked for Life: Songbun, North Korea's Social Classification System - HRNK", "accessed": "2026-07-19"}
+      ]
+    },
+    "alt_currency": {
+      "value": "partial",
+      "note": "Foreign currency (Chinese yuan, and to a lesser extent US dollars) is widely used de facto in jangmadang informal markets and has become a status marker among wealthier North Koreans, despite the state officially banning private foreign-currency trading and, per 2024-2025 reporting, actively cracking down on money changers amid the won's collapse. This is best described as tolerated/uncontrollable grey-market use rather than a legal right. Gold: the state holds an effective monopoly over gold production and reserves via the central bank and slush-fund apparatus (e.g. 'Office 39'); we could not find a documented source confirming or denying whether ordinary citizens may legally privately own or trade gold, so that specific sub-question is marked unclear. Cryptocurrency is not practically accessible to ordinary citizens, who lack internet access; DPRK-linked crypto activity documented by the US Treasury and CSIS is state-run theft/laundering, not a citizen right.",
+      "sources": [
+        {"url": "https://keia.org/the-peninsula/2024-in-review-north-koreas-economy-its-all-about-money/", "title": "2024 in Review: North Korea's Economy: It's All About Money - KEIA", "accessed": "2026-07-19"},
+        {"url": "https://www.dailynk.com/english/north-korea-expands-currency-exchange-beyond-dollar-yuan/", "title": "N. Korea expands currency exchange beyond dollar, yuan - Daily NK", "accessed": "2026-07-19"}
+      ]
+    },
+    "mandatory_insurance": {
+      "value": "partial",
+      "note": "North Korea has nominally provided state social insurance/social security since its 1948 constitution, covering sickness, disability and old age as a function of state employment assignment rather than an opt-in insurance market. As of 2025 the state is actively transitioning away from the 'Universal Free Healthcare System' branding toward a formal mandatory medical insurance model, preparing 'social security medical insurance cards' to track treatment and beginning to openly list hospital fees — but concrete premium amounts and regional rollout have not yet been decided, so implementation is still in flux.",
+      "sources": [
+        {"url": "https://www.dailynk.com/english/north-korea-prepares-shift-from-free-care-to-mandatory-medical-insurance-system/", "title": "North Korea prepares shift from 'free care' to mandatory medical insurance system - Daily NK", "accessed": "2026-07-19"}
+      ]
+    },
+    "travel_restrictions": {
+      "value": "yes",
+      "note": "This is a defining feature of the DPRK system. Travel beyond one's home city/province requires an internal travel certificate approved by a workplace supervisor or local security office for a narrow set of approved reasons; border regions, military zones and Pyongyang require additional harder-to-obtain approvals. Police checkpoints check ID on inter-provincial travel, and nightly 'lodging inspections' check for unregistered visitors. For international movement, Human Rights Watch documents that unauthorized departure attempts can be met with a shoot order from border guards, and travel/emigration requires prior government approval.",
+      "sources": [
+        {"url": "https://repo.kinu.or.kr/bitstream/2015.oak/8553/1/Freedom%20of%20Movement%20in%20North%20Korea.pdf", "title": "Freedom of Movement in North Korea - Korea Institute for National Unification (KINU)", "accessed": "2026-07-19"},
+        {"url": "https://www.hrw.org/world-report/2025/country-chapters/north-korea", "title": "World Report 2025: North Korea | Human Rights Watch", "accessed": "2026-07-19"}
+      ]
+    },
+    "internet_restrictions": {
+      "value": "yes",
+      "note": "North Korea has the most restrictive internet regime documented anywhere: the general population uses only the domestic-only 'Kwangmyong' intranet (roughly 1,000-5,000 government-approved sites, no connection to the global internet). Real, unfiltered internet access is reserved for a small elite — select government/military leaders, trusted academics, state hackers, and foreigners. Amnesty International and multiple specialist sources document this as part of a broader surveillance-state architecture rather than content-filtering in the Chinese sense (there is essentially no public internet to filter).",
+      "sources": [
+        {"url": "https://www.amnesty.org.uk/north-korea-surveillance-state-prison-camp-internet-phone-technology", "title": "North Korea, the surveillance state - Amnesty International UK", "accessed": "2026-07-19"}
+      ]
+    },
+    "free_speech": {
+      "value": "no",
+      "note": "Freedom of expression, assembly, religion and information are severely restricted. Human Rights Watch's 2025 World Report states that possessing unauthorized phones, computers, TVs or radios is illegal ('anti-socialist behavior'), and documents forced-labor sentences of 7-15 years for people caught sharing South Korean media (an SD card of South Korean movies) and 8-10 years for contact with overseas relatives/money. A 2025 UN OHCHR report found the government has increased surveillance, censorship and severe punishment over the past decade, maintaining what it called 'total control' of the population; the Ministry of State Security intensified crackdowns on cross-border communication and Chinese-phone users in 2024-2025.",
+      "sources": [
+        {"url": "https://www.hrw.org/world-report/2025/country-chapters/north-korea", "title": "World Report 2025: North Korea | Human Rights Watch", "accessed": "2026-07-19"}
+      ]
+    }
+  }
+}

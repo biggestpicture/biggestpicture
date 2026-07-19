@@ -1,0 +1,75 @@
+{
+  "iso3": "USA",
+  "country": "United States",
+  "last_reviewed": "2026-07-19",
+  "answers": {
+    "digital_id": {
+      "value": "partial",
+      "note": "No unified federal digital ID exists. Instead there is a decentralized patchwork of state-issued mobile driver's licenses (mDLs, expected to reach 100M+ holders in 2026) stored in phone wallets and accepted at 250+ TSA checkpoints, plus the voluntary federal Login.gov account for accessing federal services. Architecture is state-controlled/decentralized (credentials held on the citizen's own device, issued by individual states) rather than one centralized national database; essentially no state accepts a digital-only ID at polling places.",
+      "sources": [
+        {"url": "https://www.tsa.gov/digital-id/participating-states", "title": "Participating States and Eligible Digital IDs | Transportation Security Administration", "accessed": "2026-07-19"},
+        {"url": "https://www.tsa.gov/realid/realid-mobile-drivers-license-mdls", "title": "REAL ID Mobile Driver's Licenses (mDLs) | Transportation Security Administration", "accessed": "2026-07-19"}
+      ]
+    },
+    "cash_payment": {
+      "value": "yes",
+      "note": "Cash is legal tender under 31 U.S.C. §5103, meaning it is a valid offer of payment for debts. No federal law forces private businesses to accept it, but a growing number of states (New York as of March 2026, New Jersey, Massachusetts, Colorado, Rhode Island) and cities (Philadelphia, San Francisco, Washington DC, Chicago) now legally require most retailers to accept cash; a nationwide Payment Choice Act has been repeatedly introduced but not passed.",
+      "sources": [
+        {"url": "https://www.federalreserve.gov/faqs/currency_12772.htm", "title": "Is it legal for a business in the United States to refuse cash as a form of payment? | Federal Reserve", "accessed": "2026-07-19"},
+        {"url": "https://cashessentials.org/us-new-york-state-mandates-cash-acceptance-by-merchants/", "title": "US: New York State Mandates Cash Acceptance by Merchants | Cash Essentials", "accessed": "2026-07-19"}
+      ]
+    },
+    "mandatory_schooling": {
+      "value": "partial",
+      "note": "Compulsory school attendance exists in all 50 states, but homeschooling is legal nationwide with no federal ban. Regulation varies widely by state, from roughly a dozen 'no notice' states (e.g., Texas, Illinois, Michigan, Missouri) to states requiring notification, standardized testing, or professional evaluation of progress.",
+      "sources": [
+        {"url": "https://hslda.org/legal", "title": "Homeschool Laws By State | HSLDA", "accessed": "2026-07-19"}
+      ]
+    },
+    "social_credit": {
+      "value": "no",
+      "note": "No official U.S. government social-credit scoring system exists. Legal experts note a government-run version would likely violate First, Fourth, and Fifth Amendment protections. Private-sector consumer credit bureaus (Equifax, Experian, TransUnion) score financial creditworthiness only, which is a routine, narrow, non-government function distinct from a unified state trustworthiness score.",
+      "sources": [
+        {"url": "https://www.abajournal.com/magazine/article/some-u.s-businesses-already-require-consumers-to-maintaina-certain-social-credit-scorebut-a-government-sponsored-system-is-unlikely", "title": "Would a government-backed social credit scoring system like China's ever fly in the US? | ABA Journal", "accessed": "2026-07-19"}
+      ]
+    },
+    "alt_currency": {
+      "value": "yes",
+      "note": "Individuals may buy, hold, and self-custody cryptocurrency without a license; the SEC and CFTC classified Bitcoin, Ether, Solana and XRP as digital commodities in March 2026 and issued a coordination framework, but personal ownership/trading remains largely unrestricted (exchanges/money transmitters, not individuals, must register with FinCEN/SEC/CFTC). Private gold ownership has been unrestricted nationwide since Executive Order 6102's restrictions were formally revoked effective January 1, 1975.",
+      "sources": [
+        {"url": "https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets", "title": "SEC Clarifies the Application of Federal Securities Laws to Crypto Assets | SEC.gov", "accessed": "2026-07-19"},
+        {"url": "https://www.presidency.ucsb.edu/documents/executive-order-6102-forbidding-the-hoarding-gold-coin-gold-bullion-and-gold-certificates", "title": "Executive Order 6102—Forbidding the Hoarding of Gold Coin, Gold Bullion and Gold Certificates | The American Presidency Project", "accessed": "2026-07-19"}
+      ]
+    },
+    "mandatory_insurance": {
+      "value": "partial",
+      "note": "No federal individual health-insurance mandate is enforced: the 2017 Tax Cuts and Jobs Act zeroed out the ACA's individual-mandate penalty starting in 2019 (a handful of states — MA, NJ, CA, RI, DC — impose their own mandates). Auto liability insurance, by contrast, is legally required in 49 of 50 states (all except New Hampshire), making mandatory insurance narrow/specific rather than broad in the U.S.",
+      "sources": [
+        {"url": "https://taxfoundation.org/blog/affordable-care-act-individual-mandate-penalties/", "title": "Affordable Care Act Individual Mandate Penalties | Tax Foundation", "accessed": "2026-07-19"},
+        {"url": "https://www.mercuryinsurance.com/resources/basics-101/car-insurance-requirements-state-by-state.html", "title": "Your Guide to Car Insurance Requirements by State | Mercury Insurance", "accessed": "2026-07-19"}
+      ]
+    },
+    "travel_restrictions": {
+      "value": "partial",
+      "note": "Domestic freedom of movement for U.S. residents and citizens is unrestricted, and citizens can travel abroad freely. However, a presidential proclamation effective January 1, 2026 fully suspends U.S. entry for nationals of 19 countries (Afghanistan, Iran, Syria, Yemen, Somalia, Sudan, Haiti, Libya, and others), part of a wider list of 39 countries facing full or partial entry restrictions — a restriction targeting specific foreign-national groups, not the resident population.",
+      "sources": [
+        {"url": "https://www.congress.gov/crs-product/IN12631", "title": "Expanded \"Travel Ban\" to Take Effect January 1, 2026 | Congress.gov, Congressional Research Service", "accessed": "2026-07-19"}
+      ]
+    },
+    "internet_restrictions": {
+      "value": "partial",
+      "note": "There is no general government filtering of the open internet, but as of mid-2026, 27+ states require ID-based age verification to access adult-content sites (upheld by the Supreme Court in Free Speech Coalition v. Paxton, June 2025), effectively blocking sites like Pornhub in roughly 24 states rather than requiring verification. A federal law also forced a brief ownership-transfer/ban episode for TikTok that resolved with new U.S. ownership in January 2026.",
+      "sources": [
+        {"url": "https://www.congress.gov/crs-product/LSB11354", "title": "Supreme Court Upholds State Age-Verification Requirement for Certain Websites | Congress.gov", "accessed": "2026-07-19"},
+        {"url": "https://en.wikipedia.org/wiki/Efforts_to_ban_TikTok_in_the_United_States", "title": "Efforts to ban TikTok in the United States", "accessed": "2026-07-19"}
+      ]
+    },
+    "free_speech": {
+      "value": "partial",
+      "note": "The First Amendment provides strong constitutional protection for political speech, government criticism, and the press. However, Reporters Without Borders' 2026 World Press Freedom Index ranks the U.S. 64th of 180 countries — its lowest position since the index began in 2002 (down 7 places from 2025) — citing growing use of national security laws, legal harassment, and government pressure on journalists as chilling mechanisms.",
+      "sources": [
+        {"url": "https://rsf.org/en/2026-rsf-index-press-freedom-25-year-low", "title": "2026 RSF Index: press freedom at a 25-year low | RSF", "accessed": "2026-07-19"}
+      ]
+    }
+  }
+}

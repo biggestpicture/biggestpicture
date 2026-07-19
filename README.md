@@ -2,26 +2,39 @@
 
 **biggestpicture.info**
 
-A composite, open-data heat map of state control and surveillance intensity
-by country — AI surveillance deployment, movement & regulatory restriction,
-and digital surveillance & censorship, blended into one directional score.
+An open-data, open-source project tracking state control and surveillance
+by country, across two independent datasets:
+
+- **Composite Index** — three published academic indices (AI surveillance
+  deployment, movement & regulatory restriction, digital surveillance)
+  blended into one directional score. Broad coverage, borrowed methodology.
+- **Primary Questions** — 9 concrete, plain-language questions per country
+  (digital ID, cash, mandatory schooling, social credit, alternative
+  currencies, mandatory insurance, travel restrictions, internet
+  restrictions, free speech), each answer cited to a source anyone can
+  check. Narrow coverage today, built entirely through open contribution —
+  no single institution decides the answer.
 
 Named for the fable of the frog in slowly heating water: each individual
 measure looks survivable up close. The point of this project is to step
 back far enough to see the whole pot — across every country, all at once.
 
-Not a published, peer-reviewed index. An original visualization built on
-top of three published ones. Read [`docs/methodology.md`](docs/methodology.md)
-before citing a specific country's score.
+Not a published, peer-reviewed index. An original visualization and
+compilation built on top of cited sources. Read
+[`docs/methodology.md`](docs/methodology.md) before citing a specific
+country's score or answer.
 
 ## Layout
 
 ```
-data/       versioned datasets (CC-BY-4.0) — see data/README.md
+data/
+  composite/    the 3-axis blended index (CC-BY-4.0)
+  questions/    the 9-question primary dataset (CC-BY-4.0) — see below
 site/       the static site (MIT) — see site/build/ for the generator
 docs/       methodology and project documentation
-GOVERNANCE.md   how decisions get made, and why capture is structurally hard
-FUNDING.md      funding rules, caps, and exclusions
+GOVERNANCE.md    how decisions get made, and why capture is structurally hard
+FUNDING.md       funding rules, caps, and exclusions
+CONTRIBUTING.md  how to add or dispute a country's Primary Questions entry
 ```
 
 ## Building the site locally
@@ -40,10 +53,17 @@ static file server. `site/CNAME` is set for GitHub Pages to serve at
 
 ## Contributing
 
-- Data or methodology changes: see the RFC process in
+- **Adding or correcting a country's Primary Questions entry** — the
+  highest-impact way to help right now (7 of 179+ countries done). See
+  [`CONTRIBUTING.md`](CONTRIBUTING.md).
+- Changes to the composite index's scoring/axes: RFC process in
   [`GOVERNANCE.md`](GOVERNANCE.md).
 - Everything else (site polish, bug fixes, docs): open a PR — lazy
   consensus, no RFC needed.
+
+Every country file in `data/questions/countries/` is validated in CI
+(`node data/questions/validate.js`) — a PR that removes a citation or
+leaves a placeholder note won't merge.
 
 ## Mirrors
 
@@ -51,7 +71,7 @@ This project is designed to survive any single host disappearing. The
 canonical git history is mirrored, not hosted in one place:
 
 - Homepage: https://biggestpicture.info
-- GitHub: (add org URL once created — `biggestpicture` is unclaimed)
+- GitHub: https://github.com/biggestpicture/biggestpicture
 - Codeberg: (add org URL once created)
 - IPFS: (add latest pinned CID once first release is cut)
 
