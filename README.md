@@ -30,12 +30,28 @@ country's score or answer.
 data/
   composite/    the 3-axis blended index (CC-BY-4.0)
   questions/    the 9-question primary dataset (CC-BY-4.0) — see below
-site/       the static site (MIT) — see site/build/ for the generator
+site/
+  index.html       the data site (Composite Index + Primary Questions)
+  solutionwatch/    SolutionWatch — structurally separate, see below
+  style.css         shared stylesheet for both
+  build/            generator for site/index.html — see below
 docs/       methodology and project documentation
 GOVERNANCE.md    how decisions get made, and why capture is structurally hard
 FUNDING.md       funding rules, caps, and exclusions
 CONTRIBUTING.md  how to add or dispute a country's Primary Questions entry
 ```
+
+### SolutionWatch
+
+A second, separate section (`site/solutionwatch/`) for vetted
+services/tools that help reduce exposure to state control — the
+"now what do I do about it" counterpart to the data. Deliberately kept at
+its own URL with no automatic links to or from country score pages, so a
+future affiliate relationship can never look like it's shaping the data.
+No partners are listed yet — the public vetting policy is being written
+before any listing goes live. See the page itself for the current
+disclosure and separation policy, and open a `partner-inquiry`-tagged
+issue to be considered once the policy is published.
 
 ## Building the site locally
 
