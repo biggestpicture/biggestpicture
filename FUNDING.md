@@ -41,3 +41,11 @@ disclosed funders include cloud/AI-adjacent firms).
 
 _None yet._ This file is the commitment made before any money is accepted,
 not after.
+
+## Relationship to SolutionWatch
+
+This document covers funding *of the project itself* (donations, grants).
+Affiliate commission earned through SolutionWatch listings is a separate
+revenue category with its own policy, vetting standard, and revenue
+transparency — see `PARTNERS.md`. Both share the same underlying rule:
+money never buys editorial influence over the data.

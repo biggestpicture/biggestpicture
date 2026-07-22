@@ -41,6 +41,10 @@ specifically to make capture structurally hard, not just discouraged.
   changes what every country's headline number means.
 - **Governance changes** (this document): RFC process + supermajority
   (two-thirds) of core council.
+- **SolutionWatch partner additions/removals**: governed by `PARTNERS.md`,
+  not this document — same underlying principles (public review period,
+  sign-off from maintainers in different countries/institutions), applied
+  to commercial listings rather than data.
 
 ## RFC process (for methodology and axis changes)
 

@@ -38,6 +38,7 @@ site/
 docs/       methodology and project documentation
 GOVERNANCE.md    how decisions get made, and why capture is structurally hard
 FUNDING.md       funding rules, caps, and exclusions
+PARTNERS.md      SolutionWatch vetting standard, commercial terms, review process
 CONTRIBUTING.md  how to add or dispute a country's Primary Questions entry
 ```
 
@@ -48,10 +49,9 @@ services/tools that help reduce exposure to state control — the
 "now what do I do about it" counterpart to the data. Deliberately kept at
 its own URL with no automatic links to or from country score pages, so a
 future affiliate relationship can never look like it's shaping the data.
-No partners are listed yet — the public vetting policy is being written
-before any listing goes live. See the page itself for the current
-disclosure and separation policy, and open a `partner-inquiry`-tagged
-issue to be considered once the policy is published.
+No partners are listed yet — the vetting/commercial policy (`PARTNERS.md`)
+is published, but listings only go live after the public review process
+it defines. Open a `partner-inquiry`-tagged issue to be considered.
 
 ## Building the site locally
 
