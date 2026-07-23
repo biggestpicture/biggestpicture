@@ -1,4 +1,4 @@
-name: Build and deploy site
+name: Deploy site
 
 on:
   push:
@@ -15,25 +15,15 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Build site from data/
-        run: |
-          cd site/build
-          node generate_paths.js
-          node inject.js
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
       - id: deployment
         uses: actions/deploy-pages@v4
