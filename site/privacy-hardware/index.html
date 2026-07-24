@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy-Hardened Hardware, Honestly Assessed — The Biggest Picture</title>
+<meta name="description" content="Independently researched hardware privacy tools — hardened phones, security keys, faraday shielding — including honest disclosure of what's genuinely tested versus marketing theater.">
+<link rel="canonical" href="https://biggestpicture.info/privacy-hardware/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Biggest Picture">
+<meta property="og:url" content="https://biggestpicture.info/privacy-hardware/">
+<meta property="og:title" content="Privacy-Hardened Hardware, Honestly Assessed">
+<meta property="og:description" content="Hardened phones, security keys, faraday shielding — what's genuinely tested versus marketing theater.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Privacy-Hardened Hardware, Honestly Assessed">
+<meta name="twitter:description" content="Hardened phones, security keys, faraday shielding — what's genuinely tested versus marketing theater.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="viz-root">
+  <nav class="site-nav" aria-label="Site">
+    <a href="/" class="site-nav-brand">The Biggest Picture</a>
+    <a href="/gold-ira/">Gold &amp; Precious Metals</a>
+    <a href="/vpn-privacy/">Privacy &amp; VPNs</a>
+    <a href="/health-data/">Health Sovereignty</a>
+    <a href="/privacy-hardware/" aria-current="page">Privacy Hardware</a>
+  </nav>
+
+  <div class="hero">
+    <p class="eyebrow">Privacy Hardware</p>
+    <h1>Privacy hardware, honestly assessed</h1>
+    <p class="lede">A VPN doesn't help if the hardware underneath it is already compromised.</p>
+    <p class="sub">This category has a real theater problem — cheap faraday pouches that fail at the seams, "privacy phone" companies that don't ship, marketing claims with no independent testing behind them. We only feature what's genuinely verified, and we say plainly when a company we're otherwise recommending has a bad track record in one specific area.</p>
+  </div>
+
+  <div class="disclosure-banner" role="note">
+    <span aria-hidden="true">&#9432;</span>
+    <span><strong>Affiliate status: not yet established.</strong> Links below go directly to each project or company's own site — no affiliate relationship exists yet with anything on this page.</span>
+  </div>
+
+  <h2 class="section-title">Hardened phone: GrapheneOS</h2>
+  <p class="section-sub">The most rigorous mobile privacy/security hardening available on consumer hardware — with a maintainer conduct history worth knowing about.</p>
+
+  <div class="pick-card">
+    <h4>GrapheneOS <span class="badge badge-pick">Top pick</span></h4>
+    <p class="pick-meta">Free, open source &middot; runs on supported Google Pixel devices (6 through 10 series, plus Tablet/Fold)</p>
+    <p>A hardened Android fork built around exploit mitigation — a hardware-backed secure element (Titan M2), memory tagging, verified boot with user-controlled signing keys, and Google services stripped out by default (sandboxed Play Services is opt-in, not baked in). GrapheneOS's own official recommendation is to buy a currently-supported Pixel and flash it yourself using their browser-based installer (10&ndash;30 minutes, no command line needed) &mdash; they explicitly do not endorse any reseller selling pre-flashed devices, partly over cost and partly because you can't independently verify a stranger didn't modify the OS first.</p>
+    <p class="watch-out"><strong>Watch out:</strong> two things worth knowing before recommending this to someone. First, it only runs on Google Pixel hardware today (a Motorola partnership was announced for 2027, still pending) &mdash; an irony given Google isn't a privacy-friendly company, though GrapheneOS treats Pixel purely as a hardware vendor and removes Google's software layer entirely. Second, the project's founder has a documented history of public, heated disputes with resellers and former business partners (including a public falling-out with a phone retailer and a long-running feud referenced in a 2026 Wired investigation) &mdash; the software itself is excellent, but the project's public conduct has real friction worth knowing about.</p>
+    <a class="out-link" href="https://grapheneos.org/" target="_blank" rel="noopener noreferrer">Visit GrapheneOS &rarr;</a>
+  </div>
+
+  <h2 class="section-title">Hardware security key</h2>
+
+  <div class="pick-card">
+    <h4>YubiKey (Yubico) <span class="badge badge-pick">Cleanest recommendation on this page</span></h4>
+    <p class="pick-meta">$25&ndash;$85 depending on model &middot; Swedish company, manufactured in Sweden/USA</p>
+    <p>Physical security keys for two-factor authentication, built on open standards (FIDO2/WebAuthn/U2F, not a proprietary lock-in). The least controversial pick in this entire research pass &mdash; a genuine "does exactly what it says" product with no significant complaint pattern or controversy found.</p>
+    <a class="out-link" href="https://www.yubico.com/" target="_blank" rel="noopener noreferrer">Visit Yubico &rarr;</a>
+  </div>
+
+  <h2 class="section-title">Signal shielding</h2>
+  <p class="section-sub">This category is split between real engineering and pure marketing theater &mdash; independent lab testing exists, and most cheap options fail it.</p>
+
+  <div class="pick-card">
+    <h4>Mission Darkness <span class="badge badge-pick">Independently tested</span></h4>
+    <p class="pick-meta">Faraday bags/pouches, various sizes and prices</p>
+    <p>The one faraday bag brand in this research with actual independent, third-party verification: security researcher Matt Blaze ran controlled RF chamber tests (1&ndash;6 GHz) and found Mission Darkness's pouches achieved 90+ dB of signal attenuation &mdash; genuinely effective, not just a self-reported marketing number.</p>
+    <p class="watch-out"><strong>Watch out about this category generally:</strong> the same independent testing found makeshift alternatives fail badly &mdash; mylar emergency bags managed only ~9 dB (essentially useless), and closure mechanism (zipper/velcro quality) matters as much as the fabric itself. Cheap unbranded faraday pouches on marketplaces frequently fail at the seams within months, which is arguably worse than not using one at all, since it creates false confidence.</p>
+    <a class="out-link" href="https://mosequipment.com/" target="_blank" rel="noopener noreferrer">Visit Mission Darkness &rarr;</a>
+  </div>
+
+  <h2 class="section-title">Privacy-focused laptop</h2>
+
+  <div class="pick-card">
+    <h4>Purism &mdash; Librem laptops only <span class="badge badge-caution">See the caveat</span></h4>
+    <p class="pick-meta">Librem 14/16 line &middot; hardware kill switches, Intel Management Engine neutralized, coreboot firmware</p>
+    <p>Genuine hardware-level privacy features on the laptop line: physical kill switches for camera/mic/WiFi, and firmware-level work to disable Intel's Management Engine.</p>
+    <p class="watch-out"><strong>Watch out:</strong> Purism's reputation is genuinely poor and we're not going to soften it &mdash; Trustpilot rates the company "Poor" (2.5/5), and the company's Librem 5 phone (crowdfunded in 2015) has a widely-documented pattern of multi-year shipping delays and refund refusals; one buyer who ordered in April 2021 still hadn't received a device by March 2024. We're not featuring the Librem 5 phone at all for this reason. The laptop line has a comparatively better track record, but check current stock and recent reviews before buying &mdash; this is a company where the hardware ideas are real and the execution/reliability history is not.</p>
+    <a class="out-link" href="https://puri.sm/" target="_blank" rel="noopener noreferrer">Visit Purism &rarr;</a>
+  </div>
+
+  <div class="caveats-box">
+    <h4>What we're deliberately not featuring, and why</h4>
+    <ul>
+      <li><strong>Any specific pre-flashed GrapheneOS reseller.</strong> The GrapheneOS project itself won't endorse one, and has had a public falling-out with at least one retailer. Buy a stock Pixel and self-install using their official installer instead.</li>
+      <li><strong>The Purism Librem 5 phone.</strong> The laptop line's track record doesn't extend to the phone, which has a real, multi-year pattern of delivery and refund complaints.</li>
+      <li><strong>Generic or unbranded faraday pouches.</strong> Without independent attenuation testing behind them, there's no way to know if a cheap pouch actually works or just looks like it does &mdash; and a failed pouch is worse than no pouch, because of the false confidence it creates.</li>
+    </ul>
+  </div>
+
+  <div class="newsletter-box">
+    <h3>Get the vetting notes, not just the verdict</h3>
+    <p>We re-check reputations, shipping track records, and test data periodically &mdash; get notified when something on this page changes.</p>
+    <form class="newsletter-form" action="#" method="post" onsubmit="return false;">
+      <label class="sr-only" for="nl-email-hw">Email address</label>
+      <input type="email" id="nl-email-hw" name="email" placeholder="you@example.com" required>
+      <button type="submit">Notify me when it's live</button>
+    </form>
+    <p class="newsletter-note">The newsletter isn't live yet &mdash; this form is a placeholder while it's being set up. Nothing is collected here.</p>
+  </div>
+
+  <div class="legal-footer">
+    <p><strong>Not a substitute for a real threat-model assessment.</strong> What hardware makes sense depends entirely on who you're actually trying to protect information from and why &mdash; this page describes tools, not a personalized security plan. Pricing, availability, and company reputations change; re-verify directly before buying.</p>
+  </div>
+
+  <footer class="links">
+    <a href="/">Home</a>
+    <a href="/gold-ira/">Gold &amp; Precious Metals</a>
+    <a href="/vpn-privacy/">Privacy &amp; VPNs</a>
+    <a href="/health-data/">Health Sovereignty</a>
+  </footer>
+</div>
+</body>
+</html>
